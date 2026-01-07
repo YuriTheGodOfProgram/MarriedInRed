@@ -303,14 +303,14 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         if teleportCooldown { return }
         teleportCooldown = true
         
-        let fadeOut = SKAction.fadeOut(withDuration: 0.09)
+        let fadeOut = SKAction.fadeOut(withDuration: 0.12)
         let move = SKAction.run { player.position = position }
         let fadeIn = SKAction.fadeIn(withDuration: 0.12)
         
         player.run(SKAction.sequence([fadeOut, move, fadeIn,]))
         
         let coolDown = SKAction.sequence([
-            SKAction.wait(forDuration: 0.20),
+            SKAction.wait(forDuration: 0.25),
             SKAction.run { self.teleportCooldown = false }
         ])
         self.run(coolDown)
@@ -482,8 +482,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://youtu.be/oBXSvS2QKxU?si=Ou7xBcJn8lNF9x-T", in: gameView)
-                    print("Browser Opened")
+                    browser.open(url: "https://youtu.be/QbJJwaVdgIs", in: gameView)
+                    print("Case 26 tapped")
                     AudioManager.shared.stopMusic()
                 }
             }
@@ -577,7 +577,23 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "", in: gameView)
+                    browser.open(url: "https://apple.news/ASsXddk6JQmSVxSPthc4ujA", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 18:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    browser.open(url: "https://youtu.be/WesDO0cn6nE", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -910,14 +926,18 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
         let sx = size.width / uiFrame.size.width
         let sy = size.height / uiFrame.size.height
-        let uiScale = max(sx, sy)
-        uiFrame.setScale(max(sx, sy))
+        
+//        let uiScale = max(sx, sy)
+//        uiFrame.setScale(max(sx, sy))
+        
+        let uiScale = min(sx, sy)
+        uiFrame.setScale(uiScale)
         
         TODO.removeFromParent()
         TODO.zPosition = 2009
         TODO.setScale(uiScale)
         
-        let bottomY = -(size.height * 0.5) + (TODO.size.height * TODO.xScale * 0.5) - 105
+        let bottomY = -(size.height * 0.5) + (TODO.size.height * TODO.xScale * 0.5) - 90
         
         TODO.position = CGPoint(x: 0, y: bottomY)
         
