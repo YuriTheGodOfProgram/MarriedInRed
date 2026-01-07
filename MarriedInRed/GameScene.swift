@@ -3,6 +3,12 @@ import GameplayKit
 import Cocoa
 import SwifterSwift
 import MediaPlayer
+// This is a comment, to test
+
+/*
+ Don't push broken code
+ Commit and push after each feature or refactor
+ */
 
 class GameScene: SKScene{
     
