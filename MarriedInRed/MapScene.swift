@@ -599,6 +599,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
+//            Change a whole bunch of links, and add buttons for them. 
+            
         case 125:
             
             if !isMoving{
