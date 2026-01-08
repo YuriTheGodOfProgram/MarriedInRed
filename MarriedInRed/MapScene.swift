@@ -643,7 +643,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     room.node.alpha = 0.5
                 }
                 
-                if DialogueManager.shared.parent == nil {                    cameraNode.addChild(DialogueManager.shared)
+                if DialogueManager.shared.parent == nil {
+                    cameraNode.addChild(DialogueManager.shared)
                 }
                 
                 let seq = SKAction.sequence([
