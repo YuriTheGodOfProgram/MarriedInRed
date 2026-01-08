@@ -44,7 +44,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     
     var Hide: Bool = false
     
-    private let worldNode = SKNode()
     private let cropNode = SKCropNode()
     private let uiFrame = SKSpriteNode(imageNamed: "UI.png")
     private let windowMask = SKSpriteNode(color: .white, size: .zero)
@@ -206,6 +205,29 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         Mother.zPosition = 5
         Mother.anchorPoint = CGPoint(x: 0.5, y: 0)
         Mother.position = CGPoint(x: 1530.896, y: 427.742)
+        
+//        private func moveWorldIntoWorldNode() {
+//            // Move room nodes (loaded from .sks) into worldNode
+//            for name in roomNames {
+//                if let roomSprite = childNode(withName: name) as? SKSpriteNode {
+//                    roomSprite.removeFromParent()
+//                    worldNode.addChild(roomSprite)
+//                }
+//            }
+//
+//            // Move actors into worldNode too
+//            player.removeFromParent()
+//            Chloe.removeFromParent()
+//            Bobby.removeFromParent()
+//            // Mother currently isn't added as child in your code — if you add it later, move it too.
+//
+//            worldNode.addChild(player)
+//            worldNode.addChild(Chloe)
+//            worldNode.addChild(Bobby)
+//        }
+
+        
+        
         
         let lobby = childNode(withName: "lobby") as? SKSpriteNode
         if let door = lobby?.childNode(withName: "WeddingDoor") as? SKSpriteNode {
@@ -900,7 +922,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             
             let TRON = ARES.y
             
-            let positionInScene = scene.convert(node.position, from: parent)
+            _ = scene.convert(node.position, from: parent)
             
             if player.position.y > TRON{
                 node.zPosition = frontZ
@@ -923,6 +945,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         cropNode.maskNode = windowMask
         
         cropNode.addChild(worldNode)
+        
         
         uiFrame.zPosition = 2000
         uiFrame.position = .zero
@@ -947,6 +970,57 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         
         cameraNode.addChild(TODO)
     }
+    
+    
+//    private func setupFramedUI() {
+//        // 1) Attach crop to camera
+//        cropNode.removeFromParent()
+//        cropNode.zPosition = 10
+//        cameraNode.addChild(cropNode)
+//
+//        // 2) Put world inside the crop
+//        worldNode.removeFromParent()
+//        cropNode.addChild(worldNode)
+//
+//        // 3) Frame on top (not cropped)
+//        uiFrame.removeFromParent()
+//        uiFrame.zPosition = 2000
+//        uiFrame.position = .zero
+//        cameraNode.addChild(uiFrame)
+//
+//        // Scale the UI frame to fit the screen consistently
+//        let sx = size.width / uiFrame.size.width
+//        let sy = size.height / uiFrame.size.height
+//        let uiScale = min(sx, sy)        // “fit inside” (no cropping)
+//        uiFrame.setScale(uiScale)
+//
+//        // 4) Define the gameplay window mask size (tune these to your UI art)
+//        // These are "in screen points" because the cropNode lives in camera space.
+//        let horizontalInset: CGFloat = 120
+//        let topInset: CGFloat = 120
+//        let bottomInset: CGFloat = 220   // leaves room for To-Do area
+//
+//        let windowSize = CGSize(
+//            width: size.width - (horizontalInset * 2),
+//            height: size.height - topInset - bottomInset
+//        )
+//
+//        windowMask.removeFromParent()
+//        windowMask.color = .white
+//        windowMask.size = windowSize
+//        windowMask.position = CGPoint(x: 0, y: (bottomInset - topInset) * 0.5)
+//        cropNode.maskNode = windowMask
+//
+//        // 5) To-Do UI pinned to bottom (not cropped)
+//        TODO.removeFromParent()
+//        TODO.zPosition = 2009
+//        TODO.setScale(uiScale)
+//
+//        let bottomY = -(size.height * 0.5) + (TODO.size.height * TODO.xScale * 0.5) - 90
+//        TODO.position = CGPoint(x: 0, y: bottomY)
+//        cameraNode.addChild(TODO)
+//    }
+
     
     func DialogueDemo() {
         
