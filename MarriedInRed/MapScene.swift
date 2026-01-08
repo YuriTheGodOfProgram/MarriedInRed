@@ -2,7 +2,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 import Cocoa
-import SwifterSwift
+//import SwifterSwift
 import WebKit
 import MediaPlayer
 
@@ -752,7 +752,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             if player.frame.intersects(Mother.frame){
-                
+//                I hope this shows up in the other computer. This is a test.
+//                Add the mother. 
             }
         default:
             print("keydown: \(event.characters!) keycode: \(event.keyCode)")
