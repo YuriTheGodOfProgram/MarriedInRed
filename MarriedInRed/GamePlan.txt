@@ -4,8 +4,9 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 Things to complete(in order):
 1. Make the characters dim during dialogue scenes. 
 2. Fix the proportions of the boundary.
-3. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
-4. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-5. Add SFX sounds, for gameplay
-6. Add a 'save' file system, with story progress implemented within
-7. Dark/Light scenes
+3.
+4. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
+5. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
+6. Add SFX sounds, for gameplay
+7. Add a 'save' file system, with story progress implemented within
+8. Dark/Light scenes

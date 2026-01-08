@@ -514,7 +514,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://www.rockstargames.com/VI", in: gameView)
+                    browser.open(url: "https://waxwing0.itch.io/fbc", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -546,7 +546,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://human-rights-channel.coe.int/stop-sexism-quiz-en.html", in: gameView)
+                    browser.open(url: "https://uquiz.com/quiz/kb7WUM/do-you-support-palestine-or-israel", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -944,26 +944,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         
         cameraNode.addChild(TODO)
     }
-    
-//    private func DialogueDemo(with images: [String]){
-//        let textures = images.map { SKTexture(imageNamed: $0) }
-//        
-//        // Create an array of actions for each texture combined with a delay
-//        var actions: [SKAction] = []
-//        
-//        for texture in textures {
-//            actions.append(SKAction.setTexture(texture))
-//            actions.append(slow) // Add the wait duration after setting the texture
-//        }
-//        
-//        // Create the sequence of actions
-//        let sequence = SKAction.sequence(actions)
-//        
-//        // Stop any current actions before starting a new one
-//        
-//        removeAllActions()
-//        DialogueManager.shared.run(sequence)
-//    }
     
     func DialogueDemo() {
         
