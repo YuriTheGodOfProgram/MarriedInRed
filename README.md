@@ -4,8 +4,10 @@ MarriedInRed is a game, based on the game of the same name.
 
 - Pull Requests:
       ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
-- Wiki:
-      ->https://github.com/YuriTheGodOfProgram/MarriedInRed.wiki.git
+
+You could also contribute in the [dicussions](https://github.com/YuriTheGodOfProgram/MarriedInRed/discussions/categories/ideas) 
+
+
 
 
   
