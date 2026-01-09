@@ -4,6 +4,8 @@ import SpriteKit
 import Cocoa
 
 class Webpage: NSObject, WKNavigationDelegate {
+    
+//    Change webpage so it can scale more than it does 
 
     private var webView: WKWebView?
     private var containerView: ClickableContainer?

@@ -17,6 +17,9 @@ class GameScene: SKScene{
     override func didMove(to view: SKView) {
         
 //        Change this so when canTransition = true, then it goes to map scene
+        
+//        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
+        
         goToMapScene(after: 20)
         
     }

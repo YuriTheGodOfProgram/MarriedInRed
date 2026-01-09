@@ -453,9 +453,10 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 sprint = true
             }
             
-        case 48:
+//        case 48:
+//            
+//            pause(name: Paused)
             
-            pause(name: Paused)
 //            Make it more interactive
             
         case 17:
@@ -642,6 +643,12 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             self.isPaused = false
             print("Browser Closed")
             
+//            Focus on this portion as soon as possible.
+            
+//            pause(name: Paused)
+            
+//            Make it more interactive
+            
             player.alpha = 1
             chloeAlpha = 1
             BobbyAlpha = 1
@@ -792,7 +799,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func Dark(ShadowIndex: Int){
-            
+//            This is supposed to be a flexible function to dim everything. Not alpha.
     }
     
     func setTodoImage(_ imageName: String) {
@@ -933,8 +940,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func setupFramedUI() {
-        
-//        Something is odd about this frame, just odd. The scale is odd. 
         
         cropNode.zPosition = 10
         cameraNode.addChild(cropNode)
