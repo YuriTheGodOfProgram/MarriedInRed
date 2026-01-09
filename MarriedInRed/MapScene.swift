@@ -40,8 +40,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     var Mother: SKSpriteNode = SKSpriteNode()
     var cameraNode: SKCameraNode = SKCameraNode()
     
-
-    
     var Hide: Bool = false
     
     private let cropNode = SKCropNode()
@@ -171,8 +169,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         self.camera = cameraNode
         print(cameraNode.frame)
         addChild(cameraNode)
-        
-//        If this doesn't work...eliminate it
         
         Chloe = SKSpriteNode(imageNamed: "Foward Facing")
         Chloe.position = CGPoint(x: 1107, y: 360)
