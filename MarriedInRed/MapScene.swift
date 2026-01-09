@@ -504,7 +504,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://youtu.be/QbJJwaVdgIs", in: gameView)
+                    browser.open(url: "https://nick088official.github.io/Married-in-Red-Web-Port/www/", in: gameView)
                     print("Case 26 tapped")
                     AudioManager.shared.stopMusic()
                 }
@@ -615,7 +615,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://youtu.be/WesDO0cn6nE", in: gameView)
+                    browser.open(url: "https://play.howstuffworks.com/quiz/the-ultimate-billie-eilish-fan-quiz", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }

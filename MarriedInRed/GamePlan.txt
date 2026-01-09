@@ -4,13 +4,14 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 Things to complete(in order):
 1. Make the characters dim during dialogue scenes. 
 2. Fix the proportions of the boundary.
-3. Specify the proportions for every character then add a default, while adjusting the position accordingly.
-4. Add internal dialogue in the black page.
-5. Incorporate the different boundary for dialogue
-6. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
-7. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-8. Add ways to choose dialogue, and add story pathways
-9. Add SFX sounds, for gameplay
-10. Add a 'save' file system, with story progress implemented within
-11. Dark/Light changes
-12. Flashbacks, and a beach map for a scene.
+3. Turn the intro into a UI so you can interact with it.
+4. Specify the proportions for every character then add a default, while adjusting the position accordingly.
+5. Add internal dialogue in the black page.
+6. Incorporate the different boundary for dialogue
+7. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
+8. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
+9. Add ways to choose dialogue, and add story pathways
+10. Add SFX sounds, for gameplay
+11. Add a 'save' file system, with story progress implemented within
+12. Dark/Light changes
+13. Flashbacks, and a beach map for a scene.
