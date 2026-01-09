@@ -7,6 +7,13 @@ MarriedInRed is a game, based on the game of the same name.
 
 You could also contribute in the [dicussions](https://github.com/YuriTheGodOfProgram/MarriedInRed/discussions/categories/ideas) 
 
+Some screenshots: 
+
+
+
+<img width="816" height="624" alt="CG-MURDER-7" src="https://github.com/user-attachments/assets/15365f3c-e08a-42f3-9a22-4adcbf1942d9" />
+
+
 
 
 
