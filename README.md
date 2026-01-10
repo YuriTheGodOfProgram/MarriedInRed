@@ -1,5 +1,7 @@
 ![Married_in_red_title_screen](https://github.com/user-attachments/assets/f3771c7b-7d72-4144-bf63-f73ea037cb7e)
 
+Play here: https://github.com/YuriTheGodOfProgram/MarriedInRed.git
+
 MarriedInRed is a game, based on the game of the same name. 
 
 Estimated completion date: November 23 2026
