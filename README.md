@@ -2,6 +2,7 @@
 
 MarriedInRed is a game, based on the game of the same name. 
 Estimated completion date: November 23 2026
+Progress tracker: 43% 
 
 - Pull Requests:
       ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
