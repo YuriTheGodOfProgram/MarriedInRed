@@ -46,6 +46,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     private let uiFrame = SKSpriteNode(imageNamed: "UI.png")
     private let windowMask = SKSpriteNode(color: .white, size: .zero)
     
+    private let gameplayLayer = SKNode()
+    private let worldEffect = SKEffectNode()
+    private let colorControls = CIFilter(name: "CIColorControls")!
     
     var graphs = [String : GKGraph]()
     var isMoving = false
@@ -159,13 +162,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             player.physicsBody?.affectedByGravity = false
             addChild(player)
         
-//        Pay attention to this!!! Super suspicious!!!!
-        
-//        for room in rooms { worldNode.addChild(room.node) }
-//        worldNode.addChild(player)
-//        worldNode.addChild(Chloe)
-//        worldNode.addChild(Mother)
-        
         self.camera = cameraNode
         print(cameraNode.frame)
         addChild(cameraNode)
@@ -202,29 +198,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         Mother.anchorPoint = CGPoint(x: 0.5, y: 0)
         Mother.position = CGPoint(x: 1530.896, y: 427.742)
         
-//        private func moveWorldIntoWorldNode() {
-//            // Move room nodes (loaded from .sks) into worldNode
-//            for name in roomNames {
-//                if let roomSprite = childNode(withName: name) as? SKSpriteNode {
-//                    roomSprite.removeFromParent()
-//                    worldNode.addChild(roomSprite)
-//                }
-//            }
-//
-//            // Move actors into worldNode too
-//            player.removeFromParent()
-//            Chloe.removeFromParent()
-//            Bobby.removeFromParent()
-//            // Mother currently isn't added as child in your code — if you add it later, move it too.
-//
-//            worldNode.addChild(player)
-//            worldNode.addChild(Chloe)
-//            worldNode.addChild(Bobby)
-//        }
 
-        
-        
-        
         let lobby = childNode(withName: "lobby") as? SKSpriteNode
         if let door = lobby?.childNode(withName: "WeddingDoor") as? SKSpriteNode {
             weddingDoor = door
@@ -284,8 +258,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             print(node.name ?? "no name")
         }
         
+//    buildGameplayLayer()
     setupFramedUI()
-
+        
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -470,7 +445,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://shop.app/m/f5n03ve98z?dynamicFilterVAvailability=%7B%22available%22%3Atrue%7D&sortBy=MOST_SALES", in: gameView)
+                    browser.open(url: "https://shop.app/m/darktiger?dynamicFilterVAvailability=%7B%22available%22%3Atrue%7D&sortBy=MOST_SALES", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -533,7 +508,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://waxwing0.itch.io/fbc", in: gameView)
+                    browser.open(url: "https://github.com/MarriedInRed/discussions", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -645,11 +620,14 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             
 //            Make it more interactive
             
-            player.alpha = 1
-            chloeAlpha = 1
-            BobbyAlpha = 1
-            RoomAlpha = 1
-            currentRoom?.node.alpha = 1.0
+//            player.alpha = 1
+//            chloeAlpha = 1
+//            BobbyAlpha = 1
+//            RoomAlpha = 1
+//            currentRoom?.node.alpha = 1.0
+
+            clearRoomDim()
+
             
         case 6:
             
@@ -658,15 +636,21 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             if player.frame.intersects(Chloe.frame){
                 player.removeAllActions()
                 isMoving = false
+//                
+//                colorControls?.setValue(-0.30, forKey: kCIInputBrightnessKey)
                 
-                player.alpha = 0.5
-                chloeAlpha = 0.5
-                RoomAlpha = 0.5
-                BobbyAlpha = 0.5
                 
-                for room in rooms {
-                    room.node.alpha = 0.5
-                }
+//                player.alpha = 0.5
+//                chloeAlpha = 0.5
+//                RoomAlpha = 0.5
+//                BobbyAlpha = 0.5
+//                
+//                for room in rooms {
+//                    room.node.alpha = 0.5
+//                }
+                
+                animateRoomDim(to: 0.45)
+
                 
                 if DialogueManager.shared.parent == nil {
                     cameraNode.addChild(DialogueManager.shared)
@@ -736,16 +720,20 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             if player.frame.intersects(Bobby.frame){
                 player.removeAllActions()
                 isMoving = false
+                                
+//                player.alpha = 0.5
+//                chloeAlpha = 0.5
+//                BobbyAlpha = 0.5
+//                RoomAlpha = 0.5
+//                
+//                for room in rooms {
+//                    room.node.alpha = 0.5
+//                }
                 
-                player.alpha = 0.5
-                chloeAlpha = 0.5
-                BobbyAlpha = 0.5
-                RoomAlpha = 0.5
+//                animateRoomDim(to: 0.28)
                 
-                for room in rooms {
-                    room.node.alpha = 0.5
-                }
-                
+                animateRoomDim(to: 0.45)
+//
                 if DialogueManager.shared.parent == nil{
                     cameraNode.addChild(DialogueManager.shared)
                 }
@@ -849,9 +837,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         }
     
     func animateCamera(room: SKSpriteNode){
+        
         for room in rooms {
             room.node.alpha = 0.0
         }
+
         if room.frame.contains(player.position){
             cameraNode.position = room.position
         }
@@ -937,6 +927,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     
     private func setupFramedUI() {
         
+//        cropNode.removeFromParent()
+        
         cropNode.zPosition = 10
         cameraNode.addChild(cropNode)
         
@@ -946,7 +938,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         cropNode.maskNode = windowMask
         
         cropNode.addChild(worldNode)
-        
         
         uiFrame.zPosition = 2000
         uiFrame.position = .zero
@@ -972,55 +963,40 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         cameraNode.addChild(TODO)
     }
     
+    private let dimColor = SKColor(white: 0.0, alpha: 1.0) // true black
+
+    func dimRoom(_ room: SKSpriteNode, amount: CGFloat) {
+        room.color = dimColor
+        room.colorBlendFactor = amount
+    }
+
+    func dimAllRooms(amount: CGFloat) {
+        for r in rooms {
+            r.node.colorBlendFactor = 0.0
+            r.node.color = .white
+//            dimRoom(r.node, amount: amount)
+        }
+    }
+
+    func clearRoomDim() {
+        for r in rooms {
+            r.node.colorBlendFactor = 0.0
+            r.node.color = .white
+        }
+    }
     
-//    private func setupFramedUI() {
-//        // 1) Attach crop to camera
-//        cropNode.removeFromParent()
-//        cropNode.zPosition = 10
-//        cameraNode.addChild(cropNode)
-//
-//        // 2) Put world inside the crop
-//        worldNode.removeFromParent()
-//        cropNode.addChild(worldNode)
-//
-//        // 3) Frame on top (not cropped)
-//        uiFrame.removeFromParent()
-//        uiFrame.zPosition = 2000
-//        uiFrame.position = .zero
-//        cameraNode.addChild(uiFrame)
-//
-//        // Scale the UI frame to fit the screen consistently
-//        let sx = size.width / uiFrame.size.width
-//        let sy = size.height / uiFrame.size.height
-//        let uiScale = min(sx, sy)        // “fit inside” (no cropping)
-//        uiFrame.setScale(uiScale)
-//
-//        // 4) Define the gameplay window mask size (tune these to your UI art)
-//        // These are "in screen points" because the cropNode lives in camera space.
-//        let horizontalInset: CGFloat = 120
-//        let topInset: CGFloat = 120
-//        let bottomInset: CGFloat = 220   // leaves room for To-Do area
-//
-//        let windowSize = CGSize(
-//            width: size.width - (horizontalInset * 2),
-//            height: size.height - topInset - bottomInset
-//        )
-//
-//        windowMask.removeFromParent()
-//        windowMask.color = .white
-//        windowMask.size = windowSize
-//        windowMask.position = CGPoint(x: 0, y: (bottomInset - topInset) * 0.5)
-//        cropNode.maskNode = windowMask
-//
-//        // 5) To-Do UI pinned to bottom (not cropped)
-//        TODO.removeFromParent()
-//        TODO.zPosition = 2009
-//        TODO.setScale(uiScale)
-//
-//        let bottomY = -(size.height * 0.5) + (TODO.size.height * TODO.xScale * 0.5) - 90
-//        TODO.position = CGPoint(x: 0, y: bottomY)
-//        cameraNode.addChild(TODO)
-//    }
+    func animateRoomDim(to amount: CGFloat, duration: TimeInterval = 0.25) {
+        for r in rooms {
+            let roomNode = r.node
+            roomNode.color = dimColor
+
+            roomNode.removeAction(forKey: "RoomDim")
+            roomNode.run(.customAction(withDuration: duration) { node, t in
+                let p = CGFloat(t) / CGFloat(duration)
+                (node as! SKSpriteNode).colorBlendFactor = amount * p
+            }, withKey: "RoomDim")
+        }
+    }
 
     
     func DialogueDemo() {
