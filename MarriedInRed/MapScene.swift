@@ -50,6 +50,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     private let worldEffect = SKEffectNode()
     private let colorControls = CIFilter(name: "CIColorControls")!
     
+    private var dimmableNodes: [SKSpriteNode] = []
+    
     var graphs = [String : GKGraph]()
     var isMoving = false
     var movingDirection: MoveDirection?
@@ -128,6 +130,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 let room = Room(node: node, frame: node.frame)
                 rooms.append(room)
                 
+                node.removeFromParent()
+                worldEffect.addChild(node)
+                
                 for room in rooms {
                     for child in room.node.children{
                         if let objectNode = child as? SKSpriteNode{
@@ -146,7 +151,20 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        for room in rooms {
+            dimmableNodes.append(room.node)
+
+            for child in room.node.children {
+                if let sprite = child as? SKSpriteNode {
+                    dimmableNodes.append(sprite)
+                }
+            }
+        }
+
+        
         self.anchorPoint = .zero
+        
+        addChild(worldEffect)
         
             player = SKSpriteNode(imageNamed: "Innocent Back Walk 2")
             player.name = "player"
@@ -160,7 +178,10 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             player.physicsBody?.contactTestBitMask = PhysicsCategory.obstacle | PhysicsCategory.trigger
             
             player.physicsBody?.affectedByGravity = false
+        
             addChild(player)
+//        worldNode.addChild(player)
+//        worldEffect.addChild(player)
         
         self.camera = cameraNode
         print(cameraNode.frame)
@@ -179,6 +200,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         Chloe.physicsBody?.affectedByGravity = false
         
         addChild(Chloe)
+//        worldNode.addChild(Chloe)
+//        worldEffect.addChild(Chloe)
         
         Bobby = SKSpriteNode(imageNamed: "BobbyFront")
         Bobby.position = CGPoint(x: 1641.378, y: 356.039)
@@ -191,14 +214,23 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         Bobby.physicsBody?.contactTestBitMask = PhysicsCategory.player
         Bobby.physicsBody?.collisionBitMask = PhysicsCategory.player
         Bobby.physicsBody?.affectedByGravity = false
+        
         addChild(Bobby)
+//        worldNode.addChild(Bobby)
+//        worldEffect.addChild(Bobby)
         
         Mother = SKSpriteNode(imageNamed: "Mother Happy")
         Mother.zPosition = 5
         Mother.anchorPoint = CGPoint(x: 0.5, y: 0)
         Mother.position = CGPoint(x: 1530.896, y: 427.742)
         
-
+//        addChild(worldNode)
+        
+        dimmableNodes.append(player)
+        dimmableNodes.append(Chloe)
+        dimmableNodes.append(Bobby)
+        dimmableNodes.append(Mother)
+        
         let lobby = childNode(withName: "lobby") as? SKSpriteNode
         if let door = lobby?.childNode(withName: "WeddingDoor") as? SKSpriteNode {
             weddingDoor = door
@@ -508,7 +540,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://github.com/MarriedInRed/discussions", in: gameView)
+                    browser.open(url: "https://soundcloud.com/billieeilish", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -626,8 +658,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //            RoomAlpha = 1
 //            currentRoom?.node.alpha = 1.0
 
-            clearRoomDim()
+//            clearRoomDim()
 
+            clearSceneDim()
             
         case 6:
             
@@ -636,7 +669,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             if player.frame.intersects(Chloe.frame){
                 player.removeAllActions()
                 isMoving = false
-//                
+
 //                colorControls?.setValue(-0.30, forKey: kCIInputBrightnessKey)
                 
                 
@@ -649,7 +682,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //                    room.node.alpha = 0.5
 //                }
                 
-                animateRoomDim(to: 0.45)
+//                animateRoomDim(to: 0.45)
+                
+                animateSceneDim(to: 0.45)
 
                 
                 if DialogueManager.shared.parent == nil {
@@ -732,8 +767,10 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
 //                animateRoomDim(to: 0.28)
                 
-                animateRoomDim(to: 0.45)
-//
+//                animateRoomDim(to: 0.45)
+                
+                animateSceneDim(to: 0.45)
+
                 if DialogueManager.shared.parent == nil{
                     cameraNode.addChild(DialogueManager.shared)
                 }
@@ -977,24 +1014,27 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //            dimRoom(r.node, amount: amount)
         }
     }
-
-    func clearRoomDim() {
-        for r in rooms {
-            r.node.colorBlendFactor = 0.0
-            r.node.color = .white
+    
+    func clearSceneDim() {
+        for node in dimmableNodes {
+            node.removeAction(forKey: "Dim")
+            node.colorBlendFactor = 0.0
         }
     }
-    
-    func animateRoomDim(to amount: CGFloat, duration: TimeInterval = 0.25) {
-        for r in rooms {
-            let roomNode = r.node
-            roomNode.color = dimColor
 
-            roomNode.removeAction(forKey: "RoomDim")
-            roomNode.run(.customAction(withDuration: duration) { node, t in
-                let p = CGFloat(t) / CGFloat(duration)
-                (node as! SKSpriteNode).colorBlendFactor = amount * p
-            }, withKey: "RoomDim")
+    func animateSceneDim(to amount: CGFloat, duration: TimeInterval = 0.25) {
+
+        for node in dimmableNodes {
+            node.color = dimColor
+            node.removeAction(forKey: "DimAction")
+
+            node.run(
+                .customAction(withDuration: duration) { n, t in
+                    let p = CGFloat(t) / CGFloat(duration)
+                    (n as! SKSpriteNode).colorBlendFactor = amount * p
+                },
+                withKey: "DimAction"
+            )
         }
     }
 

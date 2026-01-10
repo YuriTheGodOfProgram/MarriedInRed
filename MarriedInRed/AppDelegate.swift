@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MarriedInRed
 //
-//  Created by Nicolas Carswell on 11/13/25.
+//  Created by YuriTheGodOfProgram on 11/13/25.
 
 import Cocoa
 

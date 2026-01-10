@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MarriedInRed
 //
-//  Created by Nicolas Carswell on 11/13/25.
+//  Created by YuriTheGodOfProgram on 11/13/25.
 //
 
 import Cocoa
@@ -12,6 +12,8 @@ import GameplayKit
 class ViewController: NSViewController {
 
     @IBOutlet var skView: SKView!
+    
+//    I think I'm supposed to add a on click here, so the UIs work.
     
     override func viewDidLoad() {
         super.viewDidLoad()
