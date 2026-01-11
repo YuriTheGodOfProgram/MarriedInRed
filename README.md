@@ -8,9 +8,11 @@ Estimated completion date: November 23 2026
 
 Progress tracker: 43% 
 
+Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
+
 Run settings: 
       ->MacOs 15.5+ 
-      ->Download the package depedencies
+      ->Download the package depedencies 
       ->XCode 16.0
 
 - Pull Requests:
