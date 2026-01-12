@@ -459,6 +459,16 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 sprint = true
             }
             
+        case 125:
+            
+            if !isMoving{
+                isMoving = true
+                print("Down at will commander!")
+                moveBackward()
+            }; if ((125 & 36) != 0){
+                sprint = true
+            }
+            
 //        case 48:
 //            
 //            pause(name: Paused)
@@ -628,17 +638,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
-//            Change a whole bunch of links, and add buttons for them. 
-            
-        case 125:
-            
-            if !isMoving{
-                isMoving = true
-                print("Down at will commander!")
-                moveBackward()
-            }; if ((125 & 36) != 0){
-                sprint = true
-            }
+//            Change a whole bunch of links, and add buttons for them.
             
         case 7:
             
@@ -648,6 +648,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             self.view?.window?.makeFirstResponder(self.view)
             self.isPaused = false
             print("Browser Closed")
+            
+            setUIMode(.gameplay)
             
 //            Focus on this portion as soon as possible.
             

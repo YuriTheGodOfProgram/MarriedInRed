@@ -2,20 +2,19 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY4Mi5wbmc=/original/iVSh8Y.png
 https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 
 Things to complete(in order):
-1. Make the characters dim during dialogue scenes. 
-2. Fix the proportions of the boundary.
-3. Fix the Z-Stack so the NPCs won't be reliant on the player for the Z-Stack relative to other NPCs and objects.
-4. Search for new alternatives to the current MapScene placement of objects and characters.
-5. Turn the intro into a UI so you can interact with it.
-6. Make bodies for Cecilia, and any other added character.
-7. Specify the proportions for every character then add a default, while adjusting the position accordingly.
-8. Add internal dialogue in the black page.
-9. Incorporate the different boundary for dialogue
-10. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
-11. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-12. Add ways to choose dialogue, and add story pathways
-13. Add SFX sounds, for gameplay
-14. Add a 'save' file system, with story progress implemented within
-15. Dark/Light changes
-16. Flashbacks, and a beach map for a scene.
-17. Improve graphics, likely with a package.
+1. Fix the proportions of the boundary.
+2. Fix the Z-Stack so the NPCs won't be reliant on the player for the Z-Stack relative to other NPCs and objects.
+3. Search for new alternatives to the current MapScene placement of objects and characters.
+4. Turn the intro into a UI so you can interact with it.
+5. Make bodies for Cecilia, and any other added character.
+6. Specify the proportions for every character then add a default, while adjusting the position accordingly.
+7. Add internal dialogue in the black page.
+8. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
+9. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
+10. Add ways to choose dialogue, and add story pathways
+11. Add SFX sounds, for gameplay
+12. Add a 'save' file system, with story progress implemented within
+13. Dark/Light changes
+14. Flashbacks, and a beach map for a scene.
+15. Improve graphics, likely with a package.
+16. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
