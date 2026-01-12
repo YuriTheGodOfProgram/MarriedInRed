@@ -24,5 +24,8 @@ Some screenshots:
 
 <img width="816" height="624" alt="CG-MURDER-7" src="https://github.com/user-attachments/assets/15365f3c-e08a-42f3-9a22-4adcbf1942d9" />
 
-[incomplete] <img width="1239" height="944" alt="Screenshot 2026-01-10 at 9 39 44 AM" src="https://github.com/user-attachments/assets/ad02c894-7975-4eb9-8797-62ff636d1cf0" />
+[incomplete] 
+<img width="1032" height="786" alt="Screenshot 2026-01-12 at 1 18 23 PM" src="https://github.com/user-attachments/assets/115d9bf8-de3f-480c-906c-cc702e76ea69" />
+
+
 
