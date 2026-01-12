@@ -2,7 +2,7 @@
 
 Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
-MarriedInRed is a SpriteKit game inspired by MarriedInRed
+MarriedInRed is a thiller visual novel game made with SpriteKit.
 
 Estimated completion date: November 23 2026
 
@@ -11,6 +11,7 @@ Progress tracker: 43%
 Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
 
 Run settings: 
+
       ->MacOs 15.5+ 
       
       ->Download the package depedencies
