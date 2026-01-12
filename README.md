@@ -2,7 +2,7 @@
 
 Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
-MarriedInRed is a game, based on the game of the same name. 
+MarriedInRed is a SpriteKit game inspired by MarriedInRed
 
 Estimated completion date: November 23 2026
 
