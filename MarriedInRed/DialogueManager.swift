@@ -51,9 +51,10 @@ final class DialogueManager: SKNode {
         
         dialogueBox = SKSpriteNode(imageNamed: "UI-TEXT-DIALOGUE")
         dialogueBox.zPosition = 2050
+        dialogueBox.setScale(1.22)
         dialogueBox.position = CGPoint(
             x: .zero,
-            y: .zero - 100, 
+            y: .zero - 10,
         )
         
         addChild(dialogueBox)
@@ -61,20 +62,20 @@ final class DialogueManager: SKNode {
         // figure out which character dialogues to get
         
         let marginX: CGFloat = 180
-        let overlapIntoBox: CGFloat = 30
+        let overlapIntoBox: CGFloat = 20
         let portaitsBaseY = -dialogueBox.size.height / 2 + overlapIntoBox
         
         if !Left.isEmpty{
             
             let leftImage = SKSpriteNode(imageNamed: Left)
             leftImage.zPosition = 900
-            leftImage.anchorPoint = CGPoint(x: 0.5, y: 0)
+            leftImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            leftImage.setScale(1.4)
+            leftImage.setScale(1.22)
             
             leftImage.position = CGPoint(
-                x: -dialogueBox.size.width / 2 + marginX,
-                y: portaitsBaseY
+                x: -dialogueBox.size.width / 2 + marginX + 100,
+                y: portaitsBaseY + 80
                 )
 
             addChild(leftImage)
@@ -87,13 +88,13 @@ final class DialogueManager: SKNode {
             
             let rightImage = SKSpriteNode(imageNamed: Right)
             rightImage.zPosition = 900
-            rightImage.anchorPoint = CGPoint(x: 0.5, y: 0)
+            rightImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            rightImage.setScale(1.4)
+            rightImage.setScale(1.22)
             
             rightImage.position = CGPoint(
-                x: dialogueBox.size.width / 2 - marginX,
-                y: portaitsBaseY
+                x: dialogueBox.size.width / 2 - marginX - 100,
+                y: portaitsBaseY + 80
                 )
             
             addChild(rightImage)

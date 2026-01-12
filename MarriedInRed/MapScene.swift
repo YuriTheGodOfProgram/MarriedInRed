@@ -13,6 +13,12 @@ enum MoveDirection: String {
     case right
 }
 
+private enum UIMode {
+    case gameplay
+    case dialogue
+    case cutscene
+}
+
 struct PhysicsCategory {
     static let none: UInt32 = 0 // 0
     static let player: UInt32 = 0b1 // 1
@@ -129,9 +135,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 node.zPosition = 2
                 let room = Room(node: node, frame: node.frame)
                 rooms.append(room)
-                
-                node.removeFromParent()
-                worldEffect.addChild(node)
                 
                 for room in rooms {
                     for child in room.node.children{
@@ -669,6 +672,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             if player.frame.intersects(Chloe.frame){
                 player.removeAllActions()
                 isMoving = false
+                
+                setUIMode(.dialogue)
 
 //                colorControls?.setValue(-0.30, forKey: kCIInputBrightnessKey)
                 
@@ -770,6 +775,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //                animateRoomDim(to: 0.45)
                 
                 animateSceneDim(to: 0.45)
+                
+                setUIMode(.dialogue)
 
                 if DialogueManager.shared.parent == nil{
                     cameraNode.addChild(DialogueManager.shared)
@@ -998,7 +1005,31 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         TODO.position = CGPoint(x: 0, y: bottomY)
         
         cameraNode.addChild(TODO)
+        
+        setUIMode(.gameplay)
     }
+    
+    private var uiMode: UIMode = .gameplay
+    
+    private func setUIMode(_ mode: UIMode) {
+        guard uiMode != mode else { return }
+        uiMode = mode
+
+        switch mode {
+        case .gameplay:
+            uiFrame.texture = SKTexture(imageNamed: "UI.png")
+            TODO.isHidden = false
+
+        case .dialogue:
+            uiFrame.texture = SKTexture(imageNamed: "UI-DIALOGUE.png")
+            TODO.isHidden = true
+
+        case .cutscene:
+            uiFrame.texture = SKTexture(imageNamed: "UI-CG.png")
+            TODO.isHidden = true
+        }
+    }
+
     
     private let dimColor = SKColor(white: 0.0, alpha: 1.0) // true black
 
