@@ -616,7 +616,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://apple.news/ASsXddk6JQmSVxSPthc4ujA", in: gameView)
+                    browser.open(url: "https://youtu.be/Ub-gsF1zFTE?si=BwSnrmoG4ZajHhuv", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -632,7 +632,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://play.howstuffworks.com/quiz/the-ultimate-billie-eilish-fan-quiz", in: gameView)
+                    browser.open(url: "https://apple.news/AGLHuC_AWTZmu9kUKRqFM2w", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -890,6 +890,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 
         if room.frame.contains(player.position){
             cameraNode.position = room.position
+            cameraNode.setScale(0.82)
         }
     }
     
@@ -898,8 +899,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         
         var foundRoom = false
         
-//        Add the image named UI as a frame for the camera, with the mapscene inside the opening of the UI. To look like this: https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY4Mi5wbmc=/original/iVSh8Y.png
-//        Add an image of the TODO list on the bottom to also model the image above. 
+//        Add an image of the TODO list on the bottom to also model the image above
         
 //        cameraNode.position.x += (player.position.x - cameraNode.position.x) * lerpFactor
         
@@ -973,14 +973,18 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     
     private func setupFramedUI() {
         
-//        cropNode.removeFromParent()
+        cropNode.removeFromParent()
+        uiFrame.removeFromParent()
+        TODO.removeFromParent()
+        
+        self.camera = cameraNode
+        if cameraNode.parent == nil { addChild(cameraNode) }
         
         cropNode.zPosition = 10
         cameraNode.addChild(cropNode)
         
-        removeAllActions()
-        
         windowMask.position = CGPoint(x: 0, y: 0)
+        windowMask.position = .zero
         cropNode.maskNode = windowMask
         
         cropNode.addChild(worldNode)
@@ -991,10 +995,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
         let sx = size.width / uiFrame.size.width
         let sy = size.height / uiFrame.size.height
-        
-//        let uiScale = max(sx, sy)
-//        uiFrame.setScale(max(sx, sy))
-        
         let uiScale = min(sx, sy)
         uiFrame.setScale(uiScale)
         
@@ -1056,7 +1056,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func animateSceneDim(to amount: CGFloat, duration: TimeInterval = 0.25) {
-
         for node in dimmableNodes {
             node.color = dimColor
             node.removeAction(forKey: "DimAction")

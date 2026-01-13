@@ -2,7 +2,7 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY4Mi5wbmc=/original/iVSh8Y.png
 https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 
 Things to complete(in order):
-1. Fix the proportions of the boundary.
+1. Fix the catering room, its horrible.
 2. Fix the Z-Stack so the NPCs won't be reliant on the player for the Z-Stack relative to other NPCs and objects.
 3. Search for new alternatives to the current MapScene placement of objects and characters.
 4. Turn the intro into a UI so you can interact with it.

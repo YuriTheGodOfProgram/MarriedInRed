@@ -71,7 +71,7 @@ final class DialogueManager: SKNode {
             leftImage.zPosition = 900
             leftImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            leftImage.setScale(1.22)
+            leftImage.setScale(1.25)
             
             leftImage.position = CGPoint(
                 x: -dialogueBox.size.width / 2 + marginX + 100,
@@ -90,7 +90,7 @@ final class DialogueManager: SKNode {
             rightImage.zPosition = 900
             rightImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            rightImage.setScale(1.22)
+            rightImage.setScale(1.25)
             
             rightImage.position = CGPoint(
                 x: dialogueBox.size.width / 2 - marginX - 100,
