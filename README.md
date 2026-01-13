@@ -2,6 +2,8 @@
 
 Story: MarriedInRed is a 2D RPG thiller game with visual novel and point-and-click elements and follows Rachel visiing her old 'friend' Chloe on her wedding day
 
+Features: Multiple-choice, soundtrack
+
 Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
 MarriedInRed is a thiller visual novel game made with SpriteKit.
