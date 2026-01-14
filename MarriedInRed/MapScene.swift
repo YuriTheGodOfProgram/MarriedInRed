@@ -650,20 +650,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             print("Browser Closed")
             
             setUIMode(.gameplay)
-            
-//            Focus on this portion as soon as possible.
-            
-//            pause(name: Paused)
-            
-//            Make it more interactive
-            
-//            player.alpha = 1
-//            chloeAlpha = 1
-//            BobbyAlpha = 1
-//            RoomAlpha = 1
-//            currentRoom?.node.alpha = 1.0
-
-//            clearRoomDim()
 
             clearSceneDim()
             
@@ -676,20 +662,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 isMoving = false
                 
                 setUIMode(.dialogue)
-
-//                colorControls?.setValue(-0.30, forKey: kCIInputBrightnessKey)
-                
-                
-//                player.alpha = 0.5
-//                chloeAlpha = 0.5
-//                RoomAlpha = 0.5
-//                BobbyAlpha = 0.5
-//                
-//                for room in rooms {
-//                    room.node.alpha = 0.5
-//                }
-                
-//                animateRoomDim(to: 0.45)
                 
                 animateSceneDim(to: 0.45)
 
@@ -762,19 +734,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             if player.frame.intersects(Bobby.frame){
                 player.removeAllActions()
                 isMoving = false
-                                
-//                player.alpha = 0.5
-//                chloeAlpha = 0.5
-//                BobbyAlpha = 0.5
-//                RoomAlpha = 0.5
-//                
-//                for room in rooms {
-//                    room.node.alpha = 0.5
-//                }
-                
-//                animateRoomDim(to: 0.28)
-                
-//                animateRoomDim(to: 0.45)
                 
                 animateSceneDim(to: 0.45)
                 
