@@ -429,6 +429,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     override func keyDown(with event: NSEvent){
         sprint = event.modifierFlags.contains(.shift)
         switch event.keyCode{
+            
         case 0124:
             
             if !isMoving{
@@ -495,6 +496,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     AudioManager.shared.stopMusic()
                 }
             }
+            
         case 28:
             
             if browser.isOpen{
@@ -537,7 +539,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://youtu.be/nknYtlOvaQ0?si=b6JpaqUJo1R48CL8", in: gameView)
+                    browser.open(url: "https://youtu.be/rvskMHn0sqQ?si=44kpe7S9NgwD7UNh", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -606,6 +608,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     AudioManager.shared.stopMusic()
                 }
             }
+            
         case 19:
             
             if browser.isOpen{
@@ -632,7 +635,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://apple.news/AGLHuC_AWTZmu9kUKRqFM2w", in: gameView)
+                    browser.open(url: "https://www.vox.com/the-highlight/473615/liberalism-conservatism-left-right-meaning", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -665,7 +668,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
                 animateSceneDim(to: 0.45)
 
-                
                 if DialogueManager.shared.parent == nil {
                     cameraNode.addChild(DialogueManager.shared)
                 }
@@ -854,22 +856,27 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
         let lerpFactor: CGFloat = 0.125
         
         var foundRoom = false
-        
-//        Add an image of the TODO list on the bottom to also model the image above
-        
+                
 //        cameraNode.position.x += (player.position.x - cameraNode.position.x) * lerpFactor
+        
+//        updateCameraSmart()
         
         for room in rooms {
 //            cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
-            cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
+            cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
+            let stableMinX = room.node.position.x - room.node.size.width * room.node.anchorPoint.x
+            cameraNode.position.x += (stableMinX - cameraNode.position.x) * lerpFactor
             }
         
         for room in rooms {
             animateCamera(room: room.node)
             cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
+//            let stableMinY = room.node.position.y - room.node.size.height * room.node.anchorPoint.y
+//            cameraNode.position.y += (stableMinY - cameraNode.position.y) * lerpFactor
         }
         
         if let currentRoom = currentRoom {
@@ -1047,5 +1054,4 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             Right: "Anxious",
         )
     }
-
 }
