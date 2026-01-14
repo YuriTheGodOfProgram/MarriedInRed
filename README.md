@@ -34,7 +34,8 @@ Some screenshots:
 <img width="1031" height="784" alt="Screenshot 2026-01-13 at 1 53 51 PM" src="https://github.com/user-attachments/assets/b655594b-d259-48e9-8251-b4732739ba7a" />
 
 [Incomplete] 
-<img width="1032" height="786" alt="Screenshot 2026-01-12 at 1 18 23 PM" src="https://github.com/user-attachments/assets/115d9bf8-de3f-480c-906c-cc702e76ea69" />
+
+<img width="1029" height="788" alt="Screenshot 2026-01-14 at 12 47 58 PM" src="https://github.com/user-attachments/assets/2e75a60a-2453-47be-9e9f-c265acc0060e" />
 
 
 
