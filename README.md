@@ -38,7 +38,6 @@ Some screenshots:
 
 [Incomplete] 
 
-<img width="1029" height="788" alt="Screenshot 2026-01-14 at 12 47 58 PM" src="https://github.com/user-attachments/assets/2e75a60a-2453-47be-9e9f-c265acc0060e" />
-
+<img width="1238" height="943" alt="Screenshot 2026-01-15 at 5 24 16 PM" src="https://github.com/user-attachments/assets/68b53b07-e3b3-4b9f-b1cf-ee7a1c58b084" />
 
 
