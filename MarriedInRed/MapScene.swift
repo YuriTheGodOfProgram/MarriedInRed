@@ -635,7 +635,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://www.vox.com/the-highlight/473615/liberalism-conservatism-left-right-meaning", in: gameView)
+                    browser.open(url: "https://www.buzzfeed.com/angelicaamartinez/soul-aesthetic-personality-quiz?utm_source=dynamic&utm_campaign=bfsharecopy", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -674,55 +674,55 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
                 let seq = SKAction.sequence([
                     SKAction.run {
-                        DialogueManager.shared.setupUI(text: "", Left: "Ashamed", Right: "Anxious")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Ashamed", Right: "Anxious", )
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Cringe", Right: "Focused")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Cringe", Right: "Focused")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Suprised", Right: "Startled")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Suprised", Right: "Startled")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Frown", Right: "Scared")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Frown", Right: "Scared")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Smirk", Right: "Relieved")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Smirk", Right: "Relieved")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Distraught", Right: "Drained")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Distraught", Right: "Drained")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Raging", Right: "Rage")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Raging", Right: "Rage")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Glaring", Right: "Angry")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Glaring", Right: "Angry")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Interest", Right: "Arguing")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Interest", Right: "Arguing")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Flustered", Right: "Stunned")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Flustered", Right: "Stunned")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Bored", Right: "Overwhelmed")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Bored", Right: "Overwhelmed")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Cringe", Right: "Tense")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Cringe", Right: "Tense")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Suprised", Right: "Startled")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Suprised", Right: "Startled")
                     }
                 ])
                 
@@ -747,23 +747,23 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
                 let seq = SKAction.sequence([
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Suprised", Right: "Dicussing")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Suprised", Right: "Dicussing")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Cringe", Right: "Nervous")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Cringe", Right: "Nervous")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Cringe", Right: "Neutral")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Cringe", Right: "Neutral")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Smirk", Right: "Shocked")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Smirk", Right: "Shocked")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", Left: "Bored", Right: "Smiling")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Bored", Right: "Smiling")
                     }
             ])
                 
@@ -1050,6 +1050,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         // Slower rest so it doesn’t flash
         DialogueManager.shared.setupUI(
             text: "",
+            speakerName: "",
             Left: "Smirk",
             Right: "Anxious",
         )

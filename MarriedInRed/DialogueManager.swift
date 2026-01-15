@@ -30,20 +30,23 @@ final class DialogueManager: SKNode {
     private var dialogueBox: SKSpriteNode!
     private var leftPortrait: SKSpriteNode?
     private var rightPortrait: SKSpriteNode?
+    
+    private var speakerLabel: SKLabelNode?
+    private var textContainer = SKNode()
 
     override init() {
         super.init()
-        setupUI(text: "")
+        setupUI(text: "", speakerName: "", Left: "", Right: "")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupUI(text: "", fileExtension: "")
+        setupUI(text: "", speakerName: "", fileExtension: "", Left: "", Right: "")
     }
     
-    var slow = SKAction.wait(forDuration: 0.18)
+var slow = SKAction.wait(forDuration: 0.18)
     
-    func setupUI(text: String, fileExtension: String = ".png", Left: String = "", Right: String = "") {
+func setupUI(text: String, speakerName: String, fileExtension: String = ".png", Left: String = "", Right: String = "") {
         
 //       Model the dialogue after this image:  https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 
@@ -58,7 +61,47 @@ final class DialogueManager: SKNode {
         )
         
         addChild(dialogueBox)
-        
+
+    self.zPosition = 5000
+
+    // Create a fresh label each setupUI call (since you removeAllChildren())
+    
+    let nameLabel = SKLabelNode(fontNamed: "NeoDunggeunmoPro-Regular")
+    nameLabel.text = speakerName
+    nameLabel.fontSize = 26
+    nameLabel.fontColor = .white
+    nameLabel.horizontalAlignmentMode = .center
+    nameLabel.verticalAlignmentMode = .center
+    nameLabel.zPosition = 9999
+    
+//    let nameY = dialogueBox.size.height
+//    nameLabel.position = CGPoint(x: 0, y: -nameY * 0.16)
+
+    // IMPORTANT: Add it to dialogueBox so it stays aligned with the UI art
+    
+    let boxHeight = dialogueBox.size.height
+    
+    let namePlateOffsetFromTop: CGFloat = 68
+    
+    let nameY = (boxHeight / 2) - namePlateOffsetFromTop
+    
+    nameLabel.position = CGPoint(
+        x: .zero,
+        y: -nameY * 0.52
+    )
+    
+    dialogueBox.addChild(nameLabel)
+    speakerLabel = nameLabel
+    
+    let Conversation = SKLabelNode(fontNamed: "NeoDunggeunmoPro-Regular")
+    Conversation.text = text
+    Conversation.fontColor = .white
+    Conversation.fontSize = 24
+    Conversation.horizontalAlignmentMode = .center
+    Conversation.verticalAlignmentMode = .center
+    Conversation.zPosition = 9998
+    
+    
         // figure out which character dialogues to get
         
         let marginX: CGFloat = 180
