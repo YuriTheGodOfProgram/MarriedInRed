@@ -101,6 +101,23 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
     Conversation.verticalAlignmentMode = .center
     Conversation.zPosition = 9998
     
+    Conversation.numberOfLines = 0
+    Conversation.preferredMaxLayoutWidth = dialogueBox.size.width - 60
+    Conversation.lineBreakMode = .byWordWrapping
+    
+    let bigPharma = dialogueBox.size.height
+    
+    let NRA: CGFloat = -50
+    
+    let Aipac = (bigPharma / 2) - NRA
+    
+    Conversation.position = CGPoint(
+        x: .zero,
+        y: -Aipac * 0.52
+        )
+    
+    dialogueBox.addChild(Conversation)
+    
     
         // figure out which character dialogues to get
         

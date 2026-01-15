@@ -674,55 +674,71 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
                 let seq = SKAction.sequence([
                     SKAction.run {
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Ashamed", Right: "Anxious", )
+                        DialogueManager.shared.setupUI(text: "Oh...you really...dressed up", speakerName: "Chloe", Left: "Ashamed", Right: "Anxious", )
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Cringe", Right: "Focused")
+                        DialogueManager.shared.setupUI(text: "Anything for my old...friend. \nOn such a special day its easy to forget", speakerName: "Rachel", Left: "Cringe", Right: "Focused")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Suprised", Right: "Startled")
+                        DialogueManager.shared.setupUI(text: "Forget...?", speakerName: "Chloe", Left: "Suprised", Right: "Startled")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Frown", Right: "Scared")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "Frown", Right: "Scared")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Smirk", Right: "Relieved")
+                        DialogueManager.shared.setupUI(text: "Rachel don't do anyhting bad", speakerName: "Chloe", Left: "Smirk", Right: "Arguing")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Distraught", Right: "Drained")
+                        DialogueManager.shared.setupUI(text: "Why would you assume its me?", speakerName: "Rachel", Left: "Suprised", Right: "Drained")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Raging", Right: "Rage")
+                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "Cringe", Right: "Focused")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Rachel", Left: "Glaring", Right: "Angry")
+                        DialogueManager.shared.setupUI(text: "Fine, I won't do anyhting...too bad", speakerName: "Rachel", Left: "Interest", Right: "Focused")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Interest", Right: "Arguing")
+                        DialogueManager.shared.setupUI(text: "Well...I must attend to other guests\n...but I'll introduce you to Bobby first...", speakerName: "Chloe", Left: "Smirk", Right: "Anxious")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Chloe", Left: "Flustered", Right: "Stunned")
+                        DialogueManager.shared.setupUI(text: "Bobby!", speakerName: "Chloe", Left: "Flustered", Right: "Startled")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Bored", Right: "Overwhelmed")
+                        DialogueManager.shared.setupUI(text: "In the flesh", speakerName: "Bobby", Left: "Bored", Right: "Neutral")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Cringe", Right: "Tense")
+                        DialogueManager.shared.setupUI(text: "I'd like you more in a stew", speakerName: "Rachel", Left: "Glaring", Right: "Shocked")
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "", Left: "Suprised", Right: "Startled")
+                        DialogueManager.shared.setupUI(text: "Bobby...why is she here?", speakerName: "Chloe", Left: "Glaring", Right: "Scared")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "I invited Rachel.\nYou spoke about her all of the time", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "I took over the invites since you got suspended\nFor giving a newborn a horse tranqulizer", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "I'm going to check on the BridesMaid...\nSpeak with her, laugh, get a bunker...", speakerName: "Chloe", Left: "Frown", Right: "Overwhelmed")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Was it something I said?\nOh I must've forgotten to say hello", speakerName: "Rachel", Left: "Suprised", Right: "")
                     }
                 ])
                 
