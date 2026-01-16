@@ -767,6 +767,30 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     HoldUp,
                     SKAction.run{
                         DialogueManager.shared.setupUI(text: "I'm going to go...", speakerName: "Rachel", Left: "Cringe", Right: "Cecilia-Exausted")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Wait! I love you!", speakerName: "Cecilia", Left: "Suprised", Right: "Cecilia-Expressive")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Huh?", speakerName: "Rachel", Left: "Suprised", Right: "Cecilia-Exausted")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "I was kidding", speakerName: "Cecilia", Left: "Ashamed", Right: "Cecilia-Smiling")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Why are you here?", speakerName: "Rachel", Left: "Cringe", Right: "Cecilia-Smiling")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Because, I'm supposed to be here!", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Expressive")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Expressive")
                     }
             ])
                 
