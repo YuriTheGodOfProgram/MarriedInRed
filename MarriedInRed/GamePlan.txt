@@ -2,7 +2,6 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY4Mi5wbmc=/original/iVSh8Y.png
 https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 
 Things to complete(in order):
-<<<<<<< Updated upstream
 1. Fix the catering room, its horrible.
 2. Fix the Z-Stack so the NPCs won't be reliant on the player for the Z-Stack relative to other NPCs and objects.
 3. Search for new alternatives to the current MapScene placement of objects and characters.
@@ -10,24 +9,12 @@ Things to complete(in order):
 5. Make bodies for Cecilia, and any other added character.
 6. Specify the proportions for every character then add a default, while adjusting the position accordingly.
 7. Add internal dialogue in the black page.
-<<<<<<< Updated upstream
 8. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
 9. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-10. Add ways to choose dialogue, and add story pathways
-11. Add SFX sounds, for gameplay
-12. Add a 'save' file system, with story progress implemented within
-13. Dark/Light changes
+10. Add ways to choose dialogue, and add story pathways.
+11. Add SFX sounds, for gameplay.
+12. Add a 'save' file system, with story progress implemented within.
+13. Dark/Light changes.
 14. Flashbacks, and a beach map for a scene.
 15. Improve graphics, likely with a package.
 16. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
-=======
-8. Incorporate the different boundary for dialogue
-9. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
-10. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-11. Add ways to choose dialogue, and add story pathways
-12. Add SFX sounds, for gameplay
-13. Add a 'save' file system, with story progress implemented within
-14. Dark/Light changes
-15. Flashbacks, and a beach map for a scene.
-16. Improve graphics, likely with a package.
->>>>>>> Stashed changes

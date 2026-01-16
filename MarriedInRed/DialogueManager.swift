@@ -22,6 +22,13 @@ struct DialogueFrame {
     let style: DialogueStyle
 }
 
+private let defaultPortraitScale: CGFloat = 1.25
+
+private let AltereredState: [(key: String, scale: CGFloat)] = [
+    ("Cecilia", 1.02),
+    ("Bobby", 1.06)
+]
+
 // This is a weird one, its for weird things.
 
 final class DialogueManager: SKNode {
@@ -120,6 +127,16 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
     
     
         // figure out which character dialogues to get
+    
+     func portraitScale(for imageName: String) -> CGFloat {
+        for override in AltereredState {
+            if imageName.contains(override.key) {
+                return override.scale
+            }
+        }
+        return defaultPortraitScale
+    }
+
         
         let marginX: CGFloat = 180
         let overlapIntoBox: CGFloat = 20
@@ -131,7 +148,9 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
             leftImage.zPosition = 900
             leftImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            leftImage.setScale(1.25)
+//            leftImage.setScale(1.25)
+            
+            leftImage.setScale(portraitScale(for: Left))
             
             leftImage.position = CGPoint(
                 x: -dialogueBox.size.width / 2 + marginX + 100,
@@ -152,6 +171,8 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
             
             rightImage.setScale(1.25)
             
+            rightImage.setScale(portraitScale(for: Right))
+
             rightImage.position = CGPoint(
                 x: dialogueBox.size.width / 2 - marginX - 100,
                 y: portaitsBaseY + 80
