@@ -726,7 +726,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I invited Rachel.\nYou spoke about her all of the time", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
+                        DialogueManager.shared.setupUI(text: "I invited Rachel.\nYou spoke about her all of the time.", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
                     },
                     HoldUp,
                     SKAction.run {
@@ -865,39 +865,49 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             room.node.alpha = 0.0
         }
 
-        if room.frame.contains(player.position){
-            cameraNode.position = room.position
+//        if room.frame.contains(player.position){
+//            cameraNode.position = room.position
+//            cameraNode.setScale(0.82)
+//        }
+        
+        if room.frame.contains(player.position) {
+            cameraNode.position = CGPoint(x: room.frame.midX, y: room.frame.midY)
             cameraNode.setScale(0.82)
         }
     }
     
     override func update(_ currentTime: TimeInterval) {
         
-        let lerpFactor: CGFloat = 0.125
+        let lerpFactor: CGFloat = 0.128
         
         var foundRoom = false
-                
-//        cameraNode.position.x += (player.position.x - cameraNode.position.x) * lerpFactor
         
-//        updateCameraSmart()
-        
-        for room in rooms {
-//            cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
-            cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
-            let stableMinX = room.node.position.x - room.node.size.width * room.node.anchorPoint.x
-            cameraNode.position.x += (stableMinX - cameraNode.position.x) * lerpFactor
-            }
+//        if let r = currentRoom?.node, r.name == "catering" {
+//            print("CATERING pos:", r.position, "size:", r.size, "anchor:", r.anchorPoint)
+//        }
         
         for room in rooms {
+//                        cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
+//                        cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
+            
+       let stableMinX = room.node.position.x - room.node.size.width * room.node.anchorPoint.x
+        cameraNode.position.x += (stableMinX - cameraNode.position.x) * lerpFactor
+            
+        }
+        
+        for room in rooms {
+            
             animateCamera(room: room.node)
+            
             cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
-//            let stableMinY = room.node.position.y - room.node.size.height * room.node.anchorPoint.y
-//            cameraNode.position.y += (stableMinY - cameraNode.position.y) * lerpFactor
+                    
         }
         
         if let currentRoom = currentRoom {
+            
             Chloe.alpha = currentRoom.frame.contains(Chloe.position) ? chloeAlpha : 0.0
             Bobby.alpha = currentRoom.frame.contains(Bobby.position) ? BobbyAlpha : 0.0
+        
         }
         
         for room in rooms {
@@ -908,11 +918,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 break
             }
             else {
-            foundRoom = false
+                foundRoom = false
             }
         }
         
-//        currentRoom?.node.alpha = 1
+        //        currentRoom?.node.alpha = 1
         currentRoom?.node.alpha = RoomAlpha
         
         updatePlayerzPosition()
@@ -920,6 +930,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         if !foundRoom {
             cameraNode.position = player.position
         }
+        
     }
     
     func updatePlayerzPosition() {
