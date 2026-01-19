@@ -690,6 +690,22 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Do you like drawing, Rachel?", speakerName: "Chloe", Left: "Interest", Right: "Arguing")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Yes, I draw sometimes", speakerName: "Rachel", Left: "Cringe", Right: "Focused")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Rachel draws this,\nRachel draws that", speakerName: "Chloe", Left: "Cringe", Right: "Arguing")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "...Rachel draws your virginity", speakerName: "Rachel", Left: "Suprised", Right: "Drained")
+                    },
+                    HoldUp,
+                    SKAction.run{
                         DialogueManager.shared.setupUI(text: "Rachel don't do anyhting bad", speakerName: "Chloe", Left: "Smirk", Right: "Arguing")
                     },
                     HoldUp,
@@ -790,7 +806,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Expressive")
+                        DialogueManager.shared.setupUI(text: "You are going to get us caught\nYou obviously aren't supposed to be here.", speakerName: "Rachel", Left: "Distraught", Right: "Cecilia-Suprised")
                     }
             ])
                 

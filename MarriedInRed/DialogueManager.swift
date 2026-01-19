@@ -26,7 +26,7 @@ private let defaultPortraitScale: CGFloat = 1.25
 
 private let AltereredState: [(key: String, scale: CGFloat)] = [
     ("Cecilia", 1.02),
-    ("Bobby", 1.06)
+    ("Bobby", 1.04)
 ]
 
 // This is a weird one, its for weird things.
