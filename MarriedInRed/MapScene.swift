@@ -706,7 +706,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Well...I must attend to other guests\n...but I'll introduce you to Bobby first...", speakerName: "Chloe", Left: "Smirk", Right: "Anxious")
+                        DialogueManager.shared.setupUI(text: "Well...I'll introduce you to Bobby...", speakerName: "Chloe", Left: "Smirk", Right: "Anxious")
                     },
                     HoldUp,
                     SKAction.run{
@@ -730,7 +730,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run {
-                        DialogueManager.shared.setupUI(text: "I took over the invites since you got suspended\nFor giving a newborn a horse tranqulizer", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
+                        DialogueManager.shared.setupUI(text: "I took over the invites since\nyou got suspended at big pharma for...", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Giving a newborn a horse tranquilizer, right?", speakerName: "Rachel", Left: "Smirk", Right: "Dicussing")
                     },
                     HoldUp,
                     SKAction.run{
@@ -739,8 +743,56 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     HoldUp,
                     SKAction.run{
                         DialogueManager.shared.setupUI(text: "Was it something I said?\nOh I must've forgotten to say hello", speakerName: "Rachel", Left: "Suprised", Right: "")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "You made quite the commotion, I'm Cecilia", speakerName: "?", Left: "Ashamed", Right: "Cecilia-Expressive")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Cecilia, weren't you in that large casino game\nagaisnt James Bond?", speakerName: "Rachel", Left: "Suprised", Right: "Cecilia-Suprised")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "And I lost all of my money", speakerName: "Cecilia", Left: "Suprised", Right: "Cecilia")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Why are you happy about it?!", speakerName: "Rachel", Left: "Distraught", Right: "Cecilia")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Because I met James Bond!", speakerName: "Cecilia", Left: "Distraught", Right: "Cecilia-Smiling")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "I'm going to go...", speakerName: "Rachel", Left: "Cringe", Right: "Cecilia-Exausted")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Wait! I love you!", speakerName: "Cecilia", Left: "Suprised", Right: "Cecilia-Expressive")
+                    },
+                    HoldUp,
+                    SKAction.run {
+                        DialogueManager.shared.setupUI(text: "Huh?", speakerName: "Rachel", Left: "Suprised", Right: "Cecilia-Exausted")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "I was kidding", speakerName: "Cecilia", Left: "Ashamed", Right: "Cecilia-Smiling")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Why are you here?", speakerName: "Rachel", Left: "Cringe", Right: "Cecilia-Smiling")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Because, I'm supposed to be here!", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Expressive")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Expressive")
                     }
-                ])
+            ])
                 
                 self.run(seq)
                 

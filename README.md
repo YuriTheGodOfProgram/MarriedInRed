@@ -6,6 +6,8 @@ Features: Multiple-choice, soundtrack
 
 Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
+Add as a package: https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
+
 MarriedInRed is a thiller visual novel game made with SpriteKit.
 
 Estimated completion date: November 23 2026
