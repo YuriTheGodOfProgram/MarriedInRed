@@ -282,6 +282,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         linkDoors("WeddingDoor", "OutsideDoor")
         linkDoors("BathroomDoor", "BedroomBathroomDoor")
         
+        depthSortableNodes.append(player)
+        
         depthSortableNodes.append(Mother)
         
         depthSortableNodes.append(Chloe)
@@ -702,7 +704,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     },
                     HoldUp,
                     SKAction.run{
-                        DialogueManager.shared.setupUI(text: "...Rachel draws your virginity", speakerName: "Rachel", Left: "Suprised", Right: "Drained")
+                        DialogueManager.shared.setupUI(text: "...Rachel draws your degree", speakerName: "Rachel", Left: "Suprised", Right: "Drained")
                     },
                     HoldUp,
                     SKAction.run{
@@ -807,7 +809,23 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     HoldUp,
                     SKAction.run{
                         DialogueManager.shared.setupUI(text: "You are going to get us caught\nYou obviously aren't supposed to be here.", speakerName: "Rachel", Left: "Distraught", Right: "Cecilia-Suprised")
-                    }
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Wow, is it because I'm 1% Egyptian?", speakerName: "Cecilia", Left: "Suprised", Right: "Cecilia-Talking")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Or is it because I'm transgender?", speakerName: "Cecilia", Left: "Suprised", Right: "Cecilia-Talking")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "Interest", Right: "Cecilia-Suprised")
+                    },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "Hmmmm...those are both\ngood reasons", speakerName: "Rachel", Left: "Interest", Right: "Cecilia-Suprised")
+                    },
             ])
                 
                 self.run(seq)
@@ -942,6 +960,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             cameraNode.position = CGPoint(x: room.frame.midX, y: room.frame.midY)
             cameraNode.setScale(0.82)
         }
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -955,6 +974,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //        }
         
         for room in rooms {
+            
 //                        cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
 //                        cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
             
@@ -1032,6 +1052,28 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+//    func updatePlayerzPosition() {
+//        
+//        let worldBaseZ: CGFloat = 50
+//        let zScale: CGFloat = 0.001   // turns pixels into small z differences
+//        
+//        for node in depthSortableNodes {
+//            guard let parent = node.parent, let scene = node.scene else { continue }
+//            
+//            // "Feet Y" in scene coordinates
+//            let feetInParent = CGPoint(x: node.position.x, y: node.frame.minY)
+//            let feetInScene = scene.convert(feetInParent, from: parent)
+//            let feetY = feetInScene.y
+//            
+//            // Lower on screen (smaller Y) should be drawn in front (larger z)
+//            node.zPosition = worldBaseZ - (feetY * zScale)
+//            
+//            // Optional: clamp just to be safe
+//            if node.zPosition < 0 { node.zPosition = 0 }
+//            if node.zPosition > 200 { node.zPosition = 200 }
+//        }
+//    }
+    
     private func setupFramedUI() {
         
         cropNode.removeFromParent()
@@ -1092,7 +1134,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             TODO.isHidden = true
         }
     }
-
     
     private let dimColor = SKColor(white: 0.0, alpha: 1.0) // true black
 

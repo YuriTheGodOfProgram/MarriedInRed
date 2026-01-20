@@ -2,18 +2,16 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY4Mi5wbmc=/original/iVSh8Y.png
 https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 
 Things to complete(in order):
-1. Fix the Z-Stack so the NPCs won't be reliant on the player for the Z-Stack relative to other NPCs and objects.
-2. Search for new alternatives to the current MapScene placement of objects and characters.
-3. Turn the intro into a UI so you can interact with it.
-4. Make bodies for Cecilia, and any other added character.
-5. Use enums for different flashbacks, and scenes. 
-6. Add internal dialogue in the black page.
-7. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
-8. Add ways to choose dialogue, and add story pathways
-9. Add SFX sounds, for gameplay
-10. Add a 'save' file system, with story progress implemented within
-11. Dark/Light changes
-12. Flashbacks, and a beach map for a scene.
-13. Improve graphics, likely with a package.
-14. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
-15. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
+1. Search for new alternatives to the current MapScene placement of objects and characters.
+2. Turn the intro into a UI so you can interact with it.
+3. Make bodies for Cecilia, and any other added character: Sketch -> ControlNet -> AI 
+4. Use enums for different flashbacks, and scenes.
+5. Add internal dialogue in the black page.
+6. Add object interactions, and story progression. Including hiding places, and being able to pick up items.
+7. Add ways to choose dialogue, and add story pathways
+8. Add SFX sounds, for gameplay
+9. Add a 'save' file system, with story progress implemented within
+10. Dark/Light changes
+12. Improve graphics, likely with a package.
+12. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
+13. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
