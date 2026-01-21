@@ -1035,11 +1035,15 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             
             if node == player {continue}
             
-            guard let scene = node.scene, let parent = node.parent else { continue }
+//            guard let scene = node.scene, let parent = node.parent else { continue }
+            
+            guard let parent = node.parent, let scene = node.scene else { continue }
                         
             let nodeBottomLeft = CGPoint(x: node.frame.minX, y: node.frame.minY)
-            let ARES = scene.convert(nodeBottomLeft, from: parent)
-            
+//            let ARES = scene.convert(nodeBottomLeft, from: parent)
+              
+            let ARES = self.convert(nodeBottomLeft, from: parent)
+
             let TRON = ARES.y
             
             _ = scene.convert(node.position, from: parent)
@@ -1051,29 +1055,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    
-//    func updatePlayerzPosition() {
-//        
-//        let worldBaseZ: CGFloat = 50
-//        let zScale: CGFloat = 0.001   // turns pixels into small z differences
-//        
-//        for node in depthSortableNodes {
-//            guard let parent = node.parent, let scene = node.scene else { continue }
-//            
-//            // "Feet Y" in scene coordinates
-//            let feetInParent = CGPoint(x: node.position.x, y: node.frame.minY)
-//            let feetInScene = scene.convert(feetInParent, from: parent)
-//            let feetY = feetInScene.y
-//            
-//            // Lower on screen (smaller Y) should be drawn in front (larger z)
-//            node.zPosition = worldBaseZ - (feetY * zScale)
-//            
-//            // Optional: clamp just to be safe
-//            if node.zPosition < 0 { node.zPosition = 0 }
-//            if node.zPosition > 200 { node.zPosition = 200 }
-//        }
-//    }
-    
+ 
     private func setupFramedUI() {
         
         cropNode.removeFromParent()
