@@ -8,16 +8,16 @@
 import Cocoa
 import SpriteKit
 import GameplayKit
+import SwiftUI
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet var skView: SKView!
     
-//    I think I'm supposed to add a on click here, so the UIs work.
-    
+    //    I think I'm supposed to add a on click here, so the UIs work.
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let view = self.skView {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
@@ -25,7 +25,7 @@ class ViewController: NSViewController {
                 
                 scene.scaleMode = .aspectFit
                 
-//                scene.scaleMode = .resizeFill
+                //                scene.scaleMode = .resizeFill
                 
                 // Present the scene
                 view.presentScene(scene)
@@ -38,4 +38,3 @@ class ViewController: NSViewController {
         }
     }
 }
-

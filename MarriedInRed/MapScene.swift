@@ -637,7 +637,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://www.buzzfeed.com/angelicaamartinez/soul-aesthetic-personality-quiz?utm_source=dynamic&utm_campaign=bfsharecopy", in: gameView)
+                    browser.open(url: "https://quizrain.net/wpqpersonality/dexter-how-long-would-you-survive-as-dexters-target/?action=start_quize&qid=240580", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -826,6 +826,10 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     SKAction.run{
                         DialogueManager.shared.setupUI(text: "Hmmmm...those are both\ngood reasons", speakerName: "Rachel", Left: "Interest", Right: "Cecilia-Suprised")
                     },
+                    HoldUp,
+                    SKAction.run{
+                        DialogueManager.shared.setupUI(text: "You've made your choice", speakerName: "Cecilia", Left: "Cringe", Right: "Cecilia-Smiling")
+                    }
             ])
                 
                 self.run(seq)
@@ -950,17 +954,10 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         for room in rooms {
             room.node.alpha = 0.0
         }
-
-//        if room.frame.contains(player.position){
-//            cameraNode.position = room.position
-//            cameraNode.setScale(0.82)
-//        }
-        
         if room.frame.contains(player.position) {
             cameraNode.position = CGPoint(x: room.frame.midX, y: room.frame.midY)
             cameraNode.setScale(0.82)
         }
-        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -969,33 +966,19 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         
         var foundRoom = false
         
-//        if let r = currentRoom?.node, r.name == "catering" {
-//            print("CATERING pos:", r.position, "size:", r.size, "anchor:", r.anchorPoint)
-//        }
-        
         for room in rooms {
-            
-//                        cameraNode.position.x += (room.node.frame.minX - cameraNode.position.x) * lerpFactor
-//                        cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
-            
        let stableMinX = room.node.position.x - room.node.size.width * room.node.anchorPoint.x
         cameraNode.position.x += (stableMinX - cameraNode.position.x) * lerpFactor
-            
         }
         
         for room in rooms {
-            
             animateCamera(room: room.node)
-            
             cameraNode.position.y += (player.position.y - cameraNode.position.y) * lerpFactor
-                    
         }
         
         if let currentRoom = currentRoom {
-            
             Chloe.alpha = currentRoom.frame.contains(Chloe.position) ? chloeAlpha : 0.0
             Bobby.alpha = currentRoom.frame.contains(Bobby.position) ? BobbyAlpha : 0.0
-        
         }
         
         for room in rooms {
@@ -1012,13 +995,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         
         //        currentRoom?.node.alpha = 1
         currentRoom?.node.alpha = RoomAlpha
-        
         updatePlayerzPosition()
         
         if !foundRoom {
             cameraNode.position = player.position
         }
-        
     }
     
     func updatePlayerzPosition() {
@@ -1055,7 +1036,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
- 
+    
     private func setupFramedUI() {
         
         cropNode.removeFromParent()
@@ -1162,9 +1143,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         if DialogueManager.shared.parent == nil {
             cameraNode.addChild(DialogueManager.shared)
         }
-
-//        DialogueManager.shared.setupUI(text: "", Left: "Smirk", Right: "Anxious")
-
         // Slower rest so it doesn’t flash
         DialogueManager.shared.setupUI(
             text: "",

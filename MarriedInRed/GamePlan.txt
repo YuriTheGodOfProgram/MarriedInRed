@@ -4,7 +4,7 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 Things to complete(in order):
 1. Search for new alternatives to the current MapScene placement of objects and characters.
 2. Turn the intro into a UI so you can interact with it.
-3. Make bodies for Cecilia, and any other added character: Sketch -> ControlNet -> AI 
+3. Make mapscene body for Cecilia, and any other added character: Sketch -> ControlNet -> AI
 4. Use enums for different flashbacks, and scenes.
 5. Add internal dialogue in the black page.
 6. Add object interactions, and story progression. Including hiding places, and being able to pick up items.

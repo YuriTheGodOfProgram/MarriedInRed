@@ -26,7 +26,7 @@ private let defaultPortraitScale: CGFloat = 1.25
 
 private let AltereredState: [(key: String, scale: CGFloat)] = [
     ("Cecilia", 1.02),
-    ("Bobby", 1.04)
+    ("Bobby", 1.03)
 ]
 
 // This is a weird one, its for weird things.
@@ -120,7 +120,7 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
     
     Conversation.position = CGPoint(
         x: .zero,
-        y: -Aipac * 0.52
+        y: -Aipac * 0.54
         )
     
     dialogueBox.addChild(Conversation)
@@ -169,7 +169,7 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
             rightImage.zPosition = 900
             rightImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-            rightImage.setScale(1.25)
+//            rightImage.setScale(1.25)
             
             rightImage.setScale(portraitScale(for: Right))
 
