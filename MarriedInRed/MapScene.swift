@@ -1133,7 +1133,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             )
         }
     }
-
     
     func DialogueDemo() {
         

@@ -10,6 +10,16 @@ private enum BorderControl: CaseIterable {
     case Quit
 }
 
+enum Intro{
+    case IntroPage
+    case Warnings
+    case Controls
+    case Humor 
+}
+
+private var SKS: Intro = .IntroPage
+
+private var IntroSprite = SKSpriteNode(imageNamed: "IntroPage")
 private var MainMenu = SKSpriteNode(imageNamed: "Married_in_red_title_screen.webp")
 
 
@@ -33,7 +43,6 @@ class GameScene: SKScene{
         MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
         MainMenu.zPosition = 100
         addChild(MainMenu)
-
         Sequence = 1
         setTitle(.Continue)
         
@@ -80,7 +89,7 @@ class GameScene: SKScene{
         case 125:
             moveTitleSelectionDown()
             print("DOWN-titlescreen")
-        case 36:
+        case 36, 76, 56:
             activateSelection()
             print("Selected")
         default:
@@ -123,14 +132,48 @@ class GameScene: SKScene{
         setTitle(BorderControl.allCases[Sequence])
     }
     
+    
+    private var RunningMan = false
+    
+    private var _2012 = false
+    private var V = false
+    
     private func activateSelection() {
+        
         switch Interact {
         case .NewGame:
-            goToMapScene(after: 0)
+            if !RunningMan {
+                RunningMan = true
+                _1984(node: MainMenu)
+            }
         case .Continue:
-            goToMapScene(after: 0) // later: load save
+            goToMapScene(after: 0)
         case .Quit:
             NSApp.terminate(nil)
         }
+    }
+    
+    private func _1984 (node: SKSpriteNode){
+        let Gattaca = [
+            "IntroPage",
+            "Warning",
+            "Controls",
+            "Humor"
+        ]
+        
+        let AnimalFarm = Gattaca.map { SKTexture(imageNamed: $0) }
+        
+        SKTexture.preload(AnimalFarm) { [weak self] in
+            guard let self else {return} }
+        
+        let Divergant = SKAction.animate(with: AnimalFarm, timePerFrame: 5, resize: false, restore: false)
+        
+        let Fahrenheit_451 = SKAction.run{
+            print("Intro is complete")
+            self.goToMapScene(after: 5)
+        }
+        
+        node.run(.sequence([Divergant, Fahrenheit_451]), withKey: "IntroSequence")
+        
     }
 }

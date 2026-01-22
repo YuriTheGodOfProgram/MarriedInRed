@@ -29,7 +29,7 @@ private let AltereredState: [(key: String, scale: CGFloat)] = [
     ("Bobby", 1.03)
 ]
 
-// This is a weird one, its for weird things.
+// This needs internal dialogue options. 
 
 final class DialogueManager: SKNode {
     
