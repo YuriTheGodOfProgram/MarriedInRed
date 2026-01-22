@@ -5,7 +5,7 @@ Things to complete(in order):
 1. Search for new alternatives to the current MapScene placement of objects and characters.
 2. Turn the intro into a UI so you can interact with it.
 3. Add internal dialogue in the black page.
-4. Add more accurate dialogue
+4. Change to more accurate dialogue.
 5. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game
 6. Use enums for different flashbacks, and scenes.
 7. Add object interactions(with interal dialogue), and story progression. Including hiding places, being able to pick up items, new dialogues, different events in the story that activate flashbacks, updating the TODO list.
