@@ -25,7 +25,7 @@ class ViewController: NSViewController {
                 
                 scene.scaleMode = .aspectFit
                 
-                //                scene.scaleMode = .resizeFill
+                //scene.scaleMode = .resizeFill
                 
                 // Present the scene
                 view.presentScene(scene)

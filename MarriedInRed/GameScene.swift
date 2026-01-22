@@ -5,9 +5,9 @@ import Cocoa
 import MediaPlayer
 
 private enum BorderControl: CaseIterable {
-    case Quit
-    case Continue
     case NewGame
+    case Continue
+    case Quit
 }
 
 private var MainMenu = SKSpriteNode(imageNamed: "Married_in_red_title_screen.webp")
@@ -30,7 +30,14 @@ class GameScene: SKScene{
         
         //        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
         
-        goToMapScene(after: 20)
+        MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
+        MainMenu.zPosition = 100
+        addChild(MainMenu)
+
+        Sequence = 1
+        setTitle(.Continue)
+        
+//        goToMapScene(after: 20)
         
     }
     
@@ -69,9 +76,12 @@ class GameScene: SKScene{
             canTransition = true
         case 126:
             print("UP-titlescreen")
+            moveTitleSelectionUp()
         case 125:
+            moveTitleSelectionDown()
             print("DOWN-titlescreen")
         case 36:
+            activateSelection()
             print("Selected")
         default:
             print("Awaiting a command sir!")
@@ -97,7 +107,7 @@ class GameScene: SKScene{
         case .Quit:
             print("Quit")
             MainMenu.texture = SKTexture(imageNamed: "QuitScreen.tiff")
-            NSApp.terminate(nil)
+//            NSApp.terminate(nil)
         }
     }
     
@@ -111,5 +121,16 @@ class GameScene: SKScene{
         let count = BorderControl.allCases.count
         Sequence = (Sequence - 1 + count) % count
         setTitle(BorderControl.allCases[Sequence])
+    }
+    
+    private func activateSelection() {
+        switch Interact {
+        case .NewGame:
+            goToMapScene(after: 0)
+        case .Continue:
+            goToMapScene(after: 0) // later: load save
+        case .Quit:
+            NSApp.terminate(nil)
+        }
     }
 }

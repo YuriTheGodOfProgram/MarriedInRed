@@ -361,7 +361,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         // Create the sequence of actions
         let sequence = SKAction.sequence(actions)
         let repeatAction = SKAction.repeatForever(sequence)
-        
         // Stop any current actions before starting a new one
         
         player.removeAllActions()
@@ -1016,9 +1015,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             
             if node == player {continue}
             
-//            guard let scene = node.scene, let parent = node.parent else { continue }
+            guard let scene = node.scene, let parent = node.parent else { continue }
             
-            guard let parent = node.parent, let scene = node.scene else { continue }
+//            guard let parent = node.parent, let scene = node.scene else { continue }
                         
             let nodeBottomLeft = CGPoint(x: node.frame.minX, y: node.frame.minY)
 //            let ARES = scene.convert(nodeBottomLeft, from: parent)
