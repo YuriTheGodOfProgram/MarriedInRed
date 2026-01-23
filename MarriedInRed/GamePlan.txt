@@ -4,15 +4,16 @@ https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 Things to complete(in order):
 1. Search for new alternatives to the current MapScene placement of objects and characters.
 2. Turn the intro into a UI so you can interact with it.
-3. Add internal dialogue in the black page.
-4. Change to more accurate dialogue.
-5. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game
-6. Use enums for different flashbacks, and scenes.
-7. Add object interactions(with interal dialogue), and story progression. Including hiding places, being able to pick up items, new dialogues, different events in the story that activate flashbacks, updating the TODO list.
-8. Add ways to choose dialogue, and add story pathways
-9. Add SFX sounds, for gameplay
-10. Add a 'save' file system, with story progress implemented within
-11. Dark/Light changes
-12. Improve graphics, likely with a package.
-13. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
-14. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.
+3. Make the dialogue proceed on click, rather than after a set time.
+4. Add internal dialogue in the black page.
+5. Change to more accurate dialogue.
+6. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game
+7. Use enums for different flashbacks, and scenes.
+8. Add object interactions(with interal dialogue), and story progression. Including hiding places, being able to pickup items, new dialogues, different events in the story that activate flashbacks, updating the TODO list.
+9. Add ways to choose dialogue, and add story pathways
+10. Add SFX sounds, for gameplay
+11. Add a 'save' file system, with story progress implemented within
+12. Dark/Light changes
+13. Improve graphics, likely with a package.
+14. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode?
+15. Implement dialogue and thought UIs, and character PNGS. With dialogue appearing in the UI text box.

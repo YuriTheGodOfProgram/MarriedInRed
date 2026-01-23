@@ -22,6 +22,7 @@ struct DialogueFrame {
     let style: DialogueStyle
 }
 
+
 private let defaultPortraitScale: CGFloat = 1.25
 
 private let AltereredState: [(key: String, scale: CGFloat)] = [
@@ -40,6 +41,20 @@ final class DialogueManager: SKNode {
     
     private var speakerLabel: SKLabelNode?
     private var textContainer = SKNode()
+    
+    struct Line {
+        let text: String
+        let speaker: String
+        let left: String
+        let right: String
+    }
+    
+    private var lines: [Line] = []
+    private var index: Int = 0
+    private var autoDelay: TimeInterval = 99999999
+    private let autoKey = "DialogueAutoAdvance"
+    
+    var isActive: Bool { !lines.isEmpty}
 
     override init() {
         super.init()
@@ -49,6 +64,44 @@ final class DialogueManager: SKNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI(text: "", speakerName: "", fileExtension: "", Left: "", Right: "")
+    }
+    
+    func start(_ lines: [Line]){
+        removeAction(forKey: autoKey)
+        self.lines = lines
+        self.index = 0
+        
+        showCurrent()
+        schedule()
+    }
+    
+    func request(){
+        guard isActive else { return }
+        removeAction(forKey: autoKey)
+        _2099()
+    }
+    
+    private func _2099() {
+        index += 1
+        if index >= lines.count {
+            stop()
+            return
+        }
+        showCurrent()
+        schedule()
+    }
+    
+    private func showCurrent(){
+        let line = lines[index]
+        setupUI(text: line.text, speakerName: line.speaker, Left: line.left, Right: line.right)
+    }
+    
+    private func schedule(){
+        removeAction(forKey: autoKey)
+        run(.sequence([
+            .wait(forDuration: autoDelay),
+            .run { [weak self] in self?._2099() }
+        ]), withKey: autoKey)
     }
     
 var slow = SKAction.wait(forDuration: 0.18)
@@ -186,6 +239,7 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
     func stop(){
         removeFromParent()
         removeAllChildren()
+        index = 0 
     }
 }
 enum GameStatus {
