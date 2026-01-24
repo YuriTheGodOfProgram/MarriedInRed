@@ -673,167 +673,53 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     cameraNode.addChild(DialogueManager.shared)
                 }
                 
-//                I just change the method for dialogue...and now need to change everything...wow
-                
-                let seq = SKAction.sequence([
-                    SKAction.run {
-                        DialogueManager.shared.setupUI(text: "...", speakerName: "Chloe", Left: "Ashamed", Right: "Stunned", )
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Oh...you really...dressed up", speakerName: "Chloe", Left: "Smirk", Right: "Anxious")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "...!", speakerName: "Chloe", Left: "Smirk", Right: "Tense")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "You-!", speakerName: "Chloe", Left: "Suprised", Right: "Overwhelmed")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Me?", speakerName: "Rachel", Left: "Flustered", Right: "Drained")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "How did you?-", speakerName: "Chloe", Left: "Flustered", Right: "Arguing")
-                    },
-                    //                    Black screen + internal dialogue
-                    //                    Black screen + internal dialogue
-                    HoldUp,
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "You are Rachel, right?", speakerName: "Bobby", Left: "Frown", Right: "Dicussing")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Congratulations...you two", speakerName: "Rachel", Left: "Smirk", Right: "Neutral")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "And Bobby, again, I can't thank you\nenough the opprotunity", speakerName: "Rachel", Left: "Interest", Right: "Smiling")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "And if it wasn't for you, I wouldn't have\n known Chloe is getting married", speakerName: "Rachel", Left: "Cringe", Right: "Neutral")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "What? You invited Rachel?!", speakerName: "Chloe", Left: "Cringe", Right: "Scared")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Yes, I did", speakerName: "Bobby", Left: "Flustered", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "But-when?", speakerName: "Chloe", Left: "Glaring", Right: "Anxious")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Back when you for suspended\nfor-", speakerName: "Bobby", Left: "Suprised", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "Frown", Right: "Scared")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Giving a new born a horse\ntranqualizer. After felt 0.01% pain", speakerName: "Bobby", Left: "Interest", Right: "Shocked")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I'm a doctor! At least I didn't,\nprescribe opioids!", speakerName: "Chloe", Left: "Cringe", Right: "Startled")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I think doctors shouldn't\ndo either", speakerName: "Rachel", Left: "Bored", Right: "Startled")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I remeber how you mentioned Rachel\nAnd thought it would be a surpise", speakerName: "Bobby", Left: "Glaring", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I hope I didnt revive any...\nPast feuds on a wedding.", speakerName: "Rachel", Left: "Frown", Right: "Shocked")
-                    },
-                    HoldUp,
-                    SKAction.run {
-                        DialogueManager.shared.setupUI(text: "Feuds with...me?\nI wouldn't hurt a fly.", speakerName: "Rachel", Left: "Suprised", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Do you...want me to leave", speakerName: "Rachel", Left: "Frown", Right: "Shocked")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "...", speakerName: "No one", Left: "Frown", Right: "Drained")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I can't kick out that..face", speakerName: "Chloe", Left: "Frown", Right: "Startled")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "What do you mean 'that face'?", speakerName: "Bobby", Left: "Suprised", Right: "Shocked")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "", Right: "")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I was thinking about you\nwhile looking at Rachel, got mixed up", speakerName: "Chloe", Left: "Flustered", Right: "Arguing")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "", speakerName: "No one", Left: "Flustered", Right: "Drained")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "-No, it's fine. You did nothing wrong\nhoney. Thank you.", speakerName: "Chloe", Left: "Flustered", Right: "Relieved")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "It's nice to see you again, Rachel", speakerName: "Chloe", Left: "Smirk", Right: "Relieved")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Now excuse me, I-I must \nbeat...meet other guests", speakerName: "Chloe", Left: "Ashamed", Right: "Focused")
-                    },
+                let lines: [DialogueManager.Line] = [
+                    .init(text: "...", speaker: "Chloe", left: "Ashamed", right: "Stunned"),
+                    .init(text: "Oh...you really...dressed up", speaker: "Chloe", left: "Smirk", right: "Anxious"),
+                    .init(text: "...!", speaker: "Chloe", left: "Smirk", right: "Tense"),
+                    .init(text: "You-!", speaker: "Chloe", left: "Suprised", right: "Overwhelmed"),
+                    .init(text: "Me?", speaker: "Rachel", left: "Flustered", right: "Drained"),
+                    .init(text: "How did you?-", speaker: "Chloe", left: "Flustered", right: "Arguing"),
+//                    Black screen + Internal dialogue
+//                    Bobby's body appears
+                    .init(text: "You are Rachel, right?", speaker: "Bobby", left: "Frown", right: "Dicussing"),
+                    .init(text: "Congratulations, you two", speaker: "Rachel", left: "Smirk", right: "Neutral"),
+                    .init(text: "And Bobby, again, I can't thank you.\nenough for the opportunity", speaker: "Rachel", left: "Interest", right: "Smiling"),
+                    .init(text: "And if it wasn't for you, I wouldn't have\nKnown Chloe is getting Married", speaker: "Rachel", left: "Cringe", right: "Neutral"),
+                    .init(text: "What?! You invited Rachel?", speaker: "Chloe", left: "Cringe", right: "Scared"),
+                    .init(text: "Yes, I did", speaker: "Bobby", left: "Flustered", right: "Nervous"),
+                    .init(text: "But-when?", speaker: "Chloe", left: "Glaring", right: "Anxious"),
+                    .init(text: "Back when you got suspended", speaker: "Bobby", left: "Suprised", right: "Nervous"),
+                    .init(text: "", speaker: "No one", left: "Frown", right: "Scared"),
+                    .init(text: "For giving a new born a horse\ntranqulizer. After it felt 'phantom' pain", speaker: "Bobby", left: "Interest", right: "Shocked"),
+                    .init(text: "At least I didn't prescribe opioids!", speaker: "Chloe", left: "Cringe", right: "Startled"),
+                    .init(text: "Only a suspension? Hmmmm...", speaker: "Rachel", left: "Bored", right: "Nervous"),
+                    .init(text: "I remeber how you mentioned Rachel\nAnd how others spoke of you two", speaker: "Bobby", left: "Glaring", right: "Nervous"),
+                    .init(text: "Did they say\nwe loved each other?", speaker: "Chloe", left: "Ashamed", right: "Arguing"),
+                    .init(text: "Why...would they?", speaker: "Bobby", left: "Suprised", right: "Shocked"),
+                    .init(text: "Just a funny prank, they did", speaker: "Chloe", left: "Smirk", right: "Anxious"),
+                    .init(text: "", speaker: "No one", left: "Cringe", right: "Anxious"),
+                    .init(text: "...And I thought it would be\nA suprise", speaker: "Bobby", left: "Cringe", right: "Nervous"),
+                    .init(text: "I hope I didn't revive any...\nPast fueds during a wedding", speaker: "Rachel", left: "Frown", right: "Shocked"),
+                    .init(text: "Fueds with...me?\nI wouldn't hurt a fly", speaker: "Rachel", left: "Suprised", right: "Nervous"),
+                    .init(text: "Do you...want me to leave?", speaker: "Rachel", left: "Frown", right: "Shocked"),
+                    .init(text: "...", speaker: "No one", left: "Frown", right: "Drained"),
+                    .init(text: "I can't kick out that...face", speaker: "Chloe", left: "Frown", right: "Startled"),
+                    .init(text: "What do you mean 'that face'?", speaker: "Bobby", left: "Suprised", right: "Shocked"),
+                    .init(text: "Well...I-", speaker: "Chloe", left: "Flustered", right: "Arguing"),
+                    .init(text: "I was thinking about you\nwhile looking at Rachel, got mixed up", speaker: "Chloe", left: "Flustered", right: "Arguing"),
+                    .init(text: "You did nothing wrong\nhoney. Thank you.", speaker: "Chloe", left: "Flustered", right: "Relieved"),
+                    .init(text: "Its nice to see you again, Rachel", speaker: "Chloe", left: "Smirk", right: "Relieved"),
+                    .init(text: "Now excuse me, I-I must\nbeat...meet other guests", speaker: "Chloe", left: "Ashamed", right: "Focused"),
 //                    Dark screen + internal dialogue
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Wait!", speakerName: "Bobby", Left: "Suprised", Right: "Dicussing")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "What was the nature of\n your relationship?", speakerName: "Bobby", Left: "Interest", Right: "Shocked")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I-I must go...", speakerName: "Chloe", Left: "Cringe", Right: "Anxious")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "I do sincerly apologize...", speakerName: "Bobby", Left: "Frown", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "We appreciate that you came", speakerName: "Bobby", Left: "Frown", Right: "Nervous")
-                    },
-                    HoldUp,
-                    SKAction.run{
-                        DialogueManager.shared.setupUI(text: "Please, do still make yourself\ncomfortable", speakerName: "Bobby", Left: "Frown", Right: "Nervous")
-                    },
-                ])
-                
-                self.run(seq)
-                
-                self.removeAction(forKey: "DialogueSequence")
-                
-                self.run(seq, withKey: "DialogueSequence")
+//                    Chloe diappears
+                    .init(text: "I do sincerly apologize...", speaker: "Bobby", left: "Frown", right: "Nervous"),
+                    .init(text: "We appreciate that you came", speaker: "Bobby", left: "Frown", right: "Nervous"),
+                    .init(text: "Please, do still make youself\ncomforable", speaker: "Bobby", left: "Frown", right: "Nervous")
+                ]
+                                
+                DialogueManager.shared.start(lines)
+            
                                 
             }
             if player.frame.intersects(Bobby.frame){
