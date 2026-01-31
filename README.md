@@ -12,7 +12,7 @@ MarriedInRed is a thiller visual novel game made with SpriteKit
 
 Estimated completion date: July 4, 2026
 
-Progress tracker: 43% 
+Progress tracker: 46% 
 
 Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
 
