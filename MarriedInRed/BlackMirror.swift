@@ -9,3 +9,8 @@ import Cocoa
 import GameplayKit
 
 //This page is for the begining dialogue with the black page.
+
+final class BlackMirror: SKNode {
+    
+    
+}

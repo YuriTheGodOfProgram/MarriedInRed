@@ -572,7 +572,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://www.desmos.com/calculator", in: gameView)
+                    browser.open(url: "https://brilliant.org/courses/", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -588,7 +588,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://uquiz.com/quiz/kb7WUM/do-you-support-palestine-or-israel", in: gameView)
+                    browser.open(url: "https://app.ling-app.com/en/learn", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }

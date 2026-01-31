@@ -154,6 +154,7 @@ class GameScene: SKScene{
     }
     
     private func _1984 (node: SKSpriteNode){
+//        Gattaca needs altercation 
         let Gattaca = [
             "IntroPage",
             "Warning",
