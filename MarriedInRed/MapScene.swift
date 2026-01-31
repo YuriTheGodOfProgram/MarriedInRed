@@ -642,6 +642,54 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
+        case 27:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    browser.open(url: "https://www.studyfetch.com", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 24:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    browser.open(url: "https://21zerixpm.medium.com/building-a-modern-social-app-update-template-with-swiftui-ca7270b332e3", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 51:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    browser.open(url: "https://www.khanacademy.org", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
 //            Change a whole bunch of links, and add buttons for them.
             
         case 7:

@@ -12,5 +12,7 @@ import GameplayKit
 
 final class BlackMirror: SKNode {
     
+    static let shared = BlackMirror()
     
+    private let Color = SKColor(white: 0.0, alpha: 1.0)
 }
