@@ -8,20 +8,21 @@ Things to complete(in order):
 1. Add internal dialogue in the black page.
 2. Improve dialogue transition.
 3. Implement thought UIs.
-4. Make text have animations, like shaking, bolding, or Itialacs. While allowing the screen to shake if needed.
-5. Research GKStateMachine.
-6. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game.
-7. Use enums or Central GameState store, or State-Driven UI, for different flashbacks, and scenes.
-8. Add object interactions(with interal dialogue), and story progression. Including hiding places, being able to pickup items, new dialogues, different events in the story that activate flashbacks, updating the TODO list.
-9. Add ways to choose dialogue, and add story pathways.
-10. Implement dialogue for specific player actions, like walking into someone.
-11. Add SFX sounds, for gameplay.
-12. Add a 'save' file system, with story progress implemented within.
-13. Dark/Light changes.
-14. Improve graphics, likely with a package.
-15. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode? (GKGameCenterViewController).
-16. Add time-based hints(if the player takes too long).
-17. Make replays different for achievments.
-18. Allow for saving progress...somehow. Maybe, GKLocalPlayer.
-19. Add StoreKit, for in game payment options...such as donations, dialogue options, a way to pay to get achievments, or auction them to other players(with a % going to me).
-20. Add an endscene credits list(Code - Me, Writing - Me, ect), that's very, very slow. 
+4. Fix the GameScene.
+5. Make text have animations, like shaking, bolding, or Itialacs. While allowing the screen to shake if needed.
+6. Research GKStateMachine.
+7. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game.
+8. Use enums or Central GameState store, or State-Driven UI, for different flashbacks, and scenes.
+9. Add object interactions(with internal dialogue), and story progression. Including hiding places, being able to pickup items, new dialogues, different events in the story that activate flashbacks, updating the TODO list.
+10. Add ways to choose dialogue, and add story pathways.
+11. Implement dialogue for specific player actions, like walking into someone, or staring too long.
+12. Add SFX sounds, for gameplay.
+13. Add a 'save' file system, with story progress implemented within.
+14. Dark/Light changes.
+15. Improve graphics, likely with a package.
+16. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode? (GKGameCenterViewController).
+17. Add time-based hints(if the player takes too long).
+18. Make replays different for achievments.
+19. Allow for saving progress...somehow. Maybe, GKLocalPlayer.
+20. Add StoreKit, for in game payment options...such as donations, dialogue options, a way to pay to get achievments, or auction them to other players(with a % going to me).
+21. Add an endscene credits list(Code - Me, Writing - Me, ect), that's very, very slow.

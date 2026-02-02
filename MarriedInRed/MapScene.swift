@@ -588,7 +588,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://app.ling-app.com/en/learn", in: gameView)
+                    browser.open(url: "https://residentevil.fandom.com/wiki/Resident_Evil_Village", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -652,7 +652,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
-                    browser.open(url: "https://www.studyfetch.com", in: gameView)
+                    browser.open(url: "https://www.270towin.com", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }

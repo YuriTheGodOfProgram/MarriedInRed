@@ -89,7 +89,7 @@ class GameScene: SKScene{
         case 125:
             moveTitleSelectionDown()
             print("DOWN-titlescreen")
-        case 36, 76, 56:
+        case 36, 76, 56, 49:
             activateSelection()
             print("Selected")
         default:
@@ -136,8 +136,7 @@ class GameScene: SKScene{
     private var RunningMan = false
     
     private var _2012 = false
-    private var V = false
-    
+    private var VforVandetta = false
     private func activateSelection() {
         
         switch Interact {

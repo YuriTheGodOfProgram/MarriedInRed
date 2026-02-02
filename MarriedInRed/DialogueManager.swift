@@ -126,7 +126,7 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
 
     // Create a fresh label each setupUI call (since you removeAllChildren())
     
-    let nameLabel = SKLabelNode(fontNamed: "NeoDunggeunmoPro-Regular")
+    let nameLabel = SKLabelNode(fontNamed: "HBIOS-SYS")
     nameLabel.text = speakerName
     nameLabel.fontSize = 26
     nameLabel.fontColor = .white
@@ -153,7 +153,7 @@ func setupUI(text: String, speakerName: String, fileExtension: String = ".png", 
     dialogueBox.addChild(nameLabel)
     speakerLabel = nameLabel
     
-    let Conversation = SKLabelNode(fontNamed: "NeoDunggeunmoPro-Regular")
+    let Conversation = SKLabelNode(fontNamed: "HBIOS-SYS")
     Conversation.text = text
     Conversation.fontColor = .white
     Conversation.fontSize = 24
