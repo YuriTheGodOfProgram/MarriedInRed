@@ -784,7 +784,13 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 
                 let lines: [DialogueManager.Line] = [
                     .init(text: "Rachel. How's the party?", speaker: "Bobby", left: "Smirk", right: "Neutral"),
-                    .init(text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling")
+                    .init(text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling"),
+                    .init(text: "Yes. Greatness makes greatness.", speaker: "Bobby", left: "Cringe", right: "Dicussing"),
+                    .init(text: "...", speaker: "No one", left: "Smirk", right: "Neutral"),
+                    .init(text: "Do you think, good men, could do\nbad things?", speaker: "Rachel", left: "Frown", right: "Nervous"),
+                    .init(text: "The first thing I would, ask is how bad?", speaker: "Bobby", left: "Smirk", right: "Nervous"),
+                    .init(text: "...", speaker: "No one", left: "Cringe", right: "Neutral"),
+                    .init(text: "Murder", speaker: "", left: "", right: "")
                 ]
                                 
                 DialogueManager.shared.start(lines)
@@ -811,10 +817,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         super.mouseDown(with: event)
-    }
-    
-    func Dark(ShadowIndex: Int){
-//            This is supposed to be a flexible function to dim everything. Not alpha.
     }
     
     func setTodoImage(_ imageName: String) {
