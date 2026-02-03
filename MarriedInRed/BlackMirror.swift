@@ -24,7 +24,7 @@ final class BlackMirror: SKNode {
     private var index: Int = 0
     private let autokey = "BlackMaskAutoDelay"
     
-    var Noir2077: Bool {!lines.isEmpty}
+    var isActive: Bool {!lines.isEmpty}
     
 //    override init(){
 //        super.init()

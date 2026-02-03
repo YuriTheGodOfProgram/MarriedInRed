@@ -54,6 +54,8 @@ final class DialogueManager: SKNode {
     private var autoDelay: TimeInterval = 99999999
     private let autoKey = "DialogueAutoAdvance"
     
+    var BlackOrNot: Bool = false
+    
     var isActive: Bool { !lines.isEmpty}
 
     override init() {
