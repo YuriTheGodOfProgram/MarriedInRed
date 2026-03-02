@@ -39,7 +39,6 @@ class Webpage: NSObject, WKNavigationDelegate {
         parentView.addSubview(container)
         self.containerView = container
         
-        // 2. Setup Constraints for Container (Center in Window)
         NSLayoutConstraint.activate([
             container.widthAnchor.constraint(equalToConstant: browserWidth),
             container.heightAnchor.constraint(equalToConstant: browserHeight),

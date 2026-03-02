@@ -4,6 +4,10 @@ import Cocoa
 //import SwifterSwift
 import MediaPlayer
 
+extension Notification.Name {
+    static let BlackMirrorDidFinish = Notification.Name("BlackMirrorDidFinish")
+}
+
 private enum BorderControl: CaseIterable {
     case NewGame
     case Continue
@@ -33,12 +37,16 @@ private var MainMenu = SKSpriteNode(imageNamed: "Married_in_red_title_screen.web
 class GameScene: SKScene{
     
     var canTransition = false
+    private var canProceedAfterBlackMirror = false
     
     override func didMove(to view: SKView) {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleBlackMirrorFinished), name: .BlackMirrorDidFinish, object: nil)
         
         //        Change this so when canTransition = true, then it goes to map scene
         
         //        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
+        
         
         MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
         MainMenu.zPosition = 100
@@ -79,23 +87,45 @@ class GameScene: SKScene{
     override func keyDown(with event: NSEvent){
         
         switch event.keyCode{
-        case 6:
-            goToMapScene(after: 0)
-            print("Z")
-            canTransition = true
+        case 6: // Z
+            if canProceedAfterBlackMirror {
+                goToMapScene(after: 0)
+            } else {
+                print("Z")
+                canTransition = true
+            }
         case 126:
             print("UP-titlescreen")
             moveTitleSelectionUp()
         case 125:
             moveTitleSelectionDown()
             print("DOWN-titlescreen")
-        case 36, 76, 56, 49:
-            activateSelection()
-            print("Selected")
+        case 36, 76, 56, 49: // Enter, Numpad Enter, Shift, Space
+            if canProceedAfterBlackMirror {
+                goToMapScene(after: 0)
+                print("Proceeding after BlackMirror")
+            } else {
+                activateSelection()
+                print("Selected")
+            }
         default:
             print("Awaiting a command sir!")
         }
     }
+    
+    override func mouseDown(with event: NSEvent) {
+        if canProceedAfterBlackMirror {
+            goToMapScene(after: 0)
+        } else {
+            super.mouseDown(with: event)
+        }
+    }
+    
+    @objc private func handleBlackMirrorFinished() {
+        // Allow proceeding once BlackMirror indicates completion
+        canProceedAfterBlackMirror = true
+    }
+    
     
     private var TitleMode: BorderControl = .Continue
     
@@ -170,10 +200,38 @@ class GameScene: SKScene{
         
         let Fahrenheit_451 = SKAction.run{
             print("Intro is complete")
-            self.goToMapScene(after: 5)
+//            self.goToMapScene(after: 5)
+            self.DeathStranding(after: 5)
+
         }
         
         node.run(.sequence([Divergant, Fahrenheit_451]), withKey: "IntroSequence")
         
     }
+    
+    private func DeathStranding(after delay: TimeInterval){
+        
+        BlackMirror.shared.attach(to: self)
+        
+        BlackMirror.shared.present(lines: [
+            "My friend Chloe from university is getting married.",
+            "We were studying to become doctors.",
+            "I haven’t seen her in a long time."
+        ])
+        
+        canProceedAfterBlackMirror = true
+        
+//        self.goToMapScene(after: 999999999999)
+        // Wait for BlackMirror to finish (notification will set the flag). Optionally, you can still auto-advance after a delay if desired:
+        run(.wait(forDuration: delay)) { [weak self] in
+            guard let self else { return }
+            if self.canProceedAfterBlackMirror {
+                self.goToMapScene(after: 0)
+            } else {
+                print("BlackMirror not finished yet; waiting for user input after completion")
+            }
+        }
+    
+    }
+    
 }
