@@ -47,7 +47,6 @@ class GameScene: SKScene{
         
         //        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
         
-        
         MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
         MainMenu.zPosition = 100
         addChild(MainMenu)

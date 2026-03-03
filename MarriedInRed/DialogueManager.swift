@@ -58,6 +58,8 @@ final class DialogueManager: SKNode {
     
     var isActive: Bool { !lines.isEmpty}
 
+//    Add an option for adding thoughts, and dark thoughts to setupUI
+    
     override init() {
         super.init()
         setupUI(text: "", speakerName: "", Left: "", Right: "")

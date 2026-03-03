@@ -709,6 +709,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             
             let HoldUp = SKAction.wait(forDuration: 4)
             
+//            Needs some sort of flag or progress tracker....
+            
             if player.frame.intersects(Chloe.frame){
                 player.removeAllActions()
                 isMoving = false
@@ -753,9 +755,6 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(text: "Do you...want me to leave?", speaker: "Rachel", left: "Frown", right: "Shocked"),
                     .init(text: "...", speaker: "No one", left: "Frown", right: "Drained"),
                     .init(text: "I can't kick out that...face", speaker: "Chloe", left: "Frown", right: "Startled"),
-                    .init(text: "What do you mean 'that face'?", speaker: "Bobby", left: "Suprised", right: "Shocked"),
-                    .init(text: "Well...I-", speaker: "Chloe", left: "Flustered", right: "Arguing"),
-                    .init(text: "I was thinking about you\nwhile looking at Rachel, got mixed up", speaker: "Chloe", left: "Flustered", right: "Arguing"),
                     .init(text: "You did nothing wrong\nhoney. Thank you.", speaker: "Chloe", left: "Flustered", right: "Relieved"),
                     .init(text: "Its nice to see you again, Rachel", speaker: "Chloe", left: "Smirk", right: "Relieved"),
                     .init(text: "Now excuse me, I-I must\nbeat...meet other guests", speaker: "Chloe", left: "Ashamed", right: "Focused"),
@@ -785,12 +784,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 let lines: [DialogueManager.Line] = [
                     .init(text: "Rachel. How's the party?", speaker: "Bobby", left: "Smirk", right: "Neutral"),
                     .init(text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling"),
-                    .init(text: "Yes. Greatness makes greatness.", speaker: "Bobby", left: "Cringe", right: "Dicussing"),
-                    .init(text: "...", speaker: "No one", left: "Smirk", right: "Neutral"),
-                    .init(text: "Do you think, good men, could do\nbad things?", speaker: "Rachel", left: "Frown", right: "Nervous"),
-                    .init(text: "The first thing I would, ask is how bad?", speaker: "Bobby", left: "Smirk", right: "Nervous"),
-                    .init(text: "...", speaker: "No one", left: "Cringe", right: "Neutral"),
-                    .init(text: "Murder", speaker: "", left: "", right: "")
+                    .init(text: "She's a great woman", speaker: "Bobby", left: "Interest", right: "Smiling"),
+                    .init(text: "I heard she wanted to\nkick out, Cecilia", speaker: "Rachel", left: "Cringe", right: "Shocked"),
+                    .init(text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous")
                 ]
                                 
                 DialogueManager.shared.start(lines)
@@ -800,6 +796,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
 //                I hope this shows up in the other computer. This is a test.
 //                Add the mother. 
             }
+            
         default:
             print("keydown: \(event.characters!) keycode: \(event.keyCode)")
         }

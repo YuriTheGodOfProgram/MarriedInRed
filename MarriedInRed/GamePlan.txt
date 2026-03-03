@@ -5,11 +5,11 @@ Note:
 *Implement accurate dialogue and scenes
 
 Things to complete(in order):
-1. Add internal dialogue in the black page.
+1. Fix the GameScene.
 2. Improve dialogue transition.
 3. Implement thought UIs with options for dimming the background or not likely a bool.
 4. Move through rooms by tapping 'Z'
-5. Fix the GameScene.
+5. Add flags for dialogue.
 6. Make text have animations, like shaking, bolding, or Itialacs. While allowing the screen to shake if needed.
 7. Research GKStateMachine.
 8. Make mapscene body for Cecilia, and any other added character: Sketch(Canva) -> ControlNet(ArtificalStudio.AI) -> Game.
@@ -19,7 +19,7 @@ Things to complete(in order):
 12. Implement dialogue for specific player actions, like walking into someone, or staring too long.
 13. Add SFX sounds, for gameplay.
 14. Add a 'save' file system, with story progress implemented within.
-15. Tapm 'x' to open a UI page with inventory(as a list same size page), Audio(to interact with volume, SFX), Save, and Title. Then have to tap X again to exit.
+15. Tap 'x' to open a UI page with inventory(as a list same size page), Audio(to interact with volume, SFX), Save, and Title. Then have to tap X again to exit.
 16. Dark/Light changes.
 17. Improve graphics, likely with a package.
 18. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode? (GKGameCenterViewController).
@@ -27,4 +27,4 @@ Things to complete(in order):
 20. Make replays different for achievments.
 21. Allow for saving progress...somehow. Maybe, GKLocalPlayer.
 22. Add StoreKit, for in game payment options...such as donations, dialogue options, a way to pay to get achievments, or auction them to other players(with a % going to me).
-23. Add an endscene credits list(Code - Me, Writing - Me, ect), that's very, very slow.
+23. Add an endscene credits list(Code - Me, Writing - Me, ect), that's very, very slow so it annoys people.

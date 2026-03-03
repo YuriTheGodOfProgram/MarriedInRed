@@ -16,27 +16,6 @@ struct Line{
     let text: String
 }
 
-//This page is for the begining dialogue with the black page.
-//
-//final class BlackMirror: SKNode {
-//    
-//    private var lines: [Line] = []
-//    private var index: Int = 0
-//    private let autokey = "BlackMaskAutoDelay"
-//    
-//    var isActive: Bool {!lines.isEmpty}
-//    
-////    override init(){
-////        super.init()
-////    //    This is where the variables go
-////    }
-//    
-//    static let shared = BlackMirror()
-//    
-//    private let Color = SKColor(white: 0.0, alpha: 1.0)
-//}
-import SpriteKit
-
 final class BlackMirror: SKNode {
 
     static let shared = BlackMirror()
@@ -92,7 +71,6 @@ final class BlackMirror: SKNode {
         textLabel.preferredMaxLayoutWidth = scene.size.width * 0.7
     }
 
-    // MARK: - Present
     func present(lines: [String]) {
         guard !isActive else { return }
 
