@@ -22,7 +22,6 @@ enum Intro{
 }
 
 private var SKS: Intro = .IntroPage
-
 private var IntroSprite = SKSpriteNode(imageNamed: "IntroPage")
 private var MainMenu = SKSpriteNode(imageNamed: "Married_in_red_title_screen.webp")
 
@@ -38,22 +37,18 @@ class GameScene: SKScene{
     
     var canTransition = false
     private var canProceedAfterBlackMirror = false
-    
     override func didMove(to view: SKView) {
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleBlackMirrorFinished), name: .BlackMirrorDidFinish, object: nil)
         
-        //        Change this so when canTransition = true, then it goes to map scene
-        
-        //        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
+//        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
+//        Things should pop up, textboxes. Likely utilizing thought dialogue.
         
         MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
         MainMenu.zPosition = 100
         addChild(MainMenu)
         Sequence = 1
         setTitle(.Continue)
-        
-//        goToMapScene(after: 20)
         
     }
     
@@ -161,9 +156,7 @@ class GameScene: SKScene{
         setTitle(BorderControl.allCases[Sequence])
     }
     
-    
     private var RunningMan = false
-    
     private var _2012 = false
     private var VforVandetta = false
     private func activateSelection() {
@@ -182,12 +175,11 @@ class GameScene: SKScene{
     }
     
     private func _1984 (node: SKSpriteNode){
-//        Gattaca needs altercation 
+//        This should instead only proceed if 'Z' is tapped
         let Gattaca = [
             "IntroPage",
             "Warning",
             "Controls",
-            "Humor"
         ]
         
         let AnimalFarm = Gattaca.map { SKTexture(imageNamed: $0) }
@@ -201,7 +193,6 @@ class GameScene: SKScene{
             print("Intro is complete")
 //            self.goToMapScene(after: 5)
             self.DeathStranding(after: 5)
-
         }
         
         node.run(.sequence([Divergant, Fahrenheit_451]), withKey: "IntroSequence")
@@ -215,17 +206,18 @@ class GameScene: SKScene{
         BlackMirror.shared.present(lines: [
             "My friend Chloe from university is getting married.",
             "We were studying to become doctors.",
-            "I haven’t seen her in a long time."
+            "I haven’t seen her in a Long time."
         ])
         
         canProceedAfterBlackMirror = true
         
-//        self.goToMapScene(after: 999999999999)
-        // Wait for BlackMirror to finish (notification will set the flag). Optionally, you can still auto-advance after a delay if desired:
+// self.goToMapScene(after: 999999999999)
+// Wait for BlackMirror to finish (notification will set the flag). Optionally, you can still auto-advance after a delay if desired:
+        
         run(.wait(forDuration: delay)) { [weak self] in
             guard let self else { return }
             if self.canProceedAfterBlackMirror {
-                self.goToMapScene(after: 0)
+                self.goToMapScene(after: CGFLOAT_MAX)
             } else {
                 print("BlackMirror not finished yet; waiting for user input after completion")
             }

@@ -52,7 +52,6 @@ final class BlackMirror: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Attach
     func attach(to scene: SKScene) {
         removeFromParent()
         scene.addChild(self)

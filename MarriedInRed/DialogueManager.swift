@@ -4,6 +4,7 @@ import SpriteKit
 enum DialogueStyle {
     case dialogue  
     case thought
+    case darkThought
 }
 
 enum SpeakerPosition {
@@ -43,6 +44,7 @@ final class DialogueManager: SKNode {
     private var textContainer = SKNode()
     
     struct Line {
+        let format: DialogueStyle
         let text: String
         let speaker: String
         let left: String
@@ -62,12 +64,12 @@ final class DialogueManager: SKNode {
     
     override init() {
         super.init()
-        setupUI(text: "", speakerName: "", Left: "", Right: "")
+        setupUI(format: DialogueStyle.dialogue, text: "", speakerName: "", Left: "", Right: "")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupUI(text: "", speakerName: "", fileExtension: "", Left: "", Right: "")
+        setupUI(format: DialogueStyle.dialogue, text: "", speakerName: "", fileExtension: "", Left: "", Right: "")
     }
     
     func start(_ lines: [Line]){
@@ -97,7 +99,7 @@ final class DialogueManager: SKNode {
     
     private func showCurrent(){
         let line = lines[index]
-        setupUI(text: line.text, speakerName: line.speaker, Left: line.left, Right: line.right)
+        setupUI(format: DialogueStyle.dialogue, text: line.text, speakerName: line.speaker, Left: line.left, Right: line.right)
     }
     
     private func schedule(){
@@ -110,7 +112,7 @@ final class DialogueManager: SKNode {
     
 var slow = SKAction.wait(forDuration: 0.18)
     
-func setupUI(text: String, speakerName: String, fileExtension: String = ".png", Left: String = "", Right: String = "") {
+    func setupUI(format: DialogueStyle, text: String, speakerName: String, fileExtension: String = ".png", Left: String = "", Right: String = "") {
         
 //       Model the dialogue after this image:  https://img.itch.zone/aW1hZ2UvMjgwMDEwNi8xNjcxNzY3OS5wbmc=/original/PrFcMu.png
 

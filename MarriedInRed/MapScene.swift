@@ -724,45 +724,45 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
                 let lines: [DialogueManager.Line] = [
-                    .init(text: "...", speaker: "Chloe", left: "Ashamed", right: "Stunned"),
-                    .init(text: "Oh...you really...dressed up", speaker: "Chloe", left: "Smirk", right: "Anxious"),
-                    .init(text: "...!", speaker: "Chloe", left: "Smirk", right: "Tense"),
-                    .init(text: "You-!", speaker: "Chloe", left: "Suprised", right: "Overwhelmed"),
-                    .init(text: "Me?", speaker: "Rachel", left: "Flustered", right: "Drained"),
-                    .init(text: "How did you?-", speaker: "Chloe", left: "Flustered", right: "Arguing"),
+                    .init(format:DialogueStyle.dialogue, text: "...", speaker: "Chloe", left: "Ashamed", right: "Stunned"),
+                    .init(format: DialogueStyle.dialogue, text: "Oh...you really...dressed up", speaker: "Chloe", left: "Smirk", right: "Anxious"),
+                    .init(format: DialogueStyle.dialogue, text: "...!", speaker: "Chloe", left: "Smirk", right: "Tense"),
+                    .init(format: DialogueStyle.dialogue, text: "You-!", speaker: "Chloe", left: "Suprised", right: "Overwhelmed"),
+                    .init(format: DialogueStyle.dialogue, text: "Me?", speaker: "Rachel", left: "Flustered", right: "Drained"),
+                    .init(format: DialogueStyle.dialogue, text: "How did you?-", speaker: "Chloe", left: "Flustered", right: "Arguing"),
 //                    Black screen + Internal dialogue
 //                    Bobby's body appears
-                    .init(text: "You are Rachel, right?", speaker: "Bobby", left: "Frown", right: "Dicussing"),
-                    .init(text: "Congratulations, you two", speaker: "Rachel", left: "Smirk", right: "Neutral"),
-                    .init(text: "And Bobby, again, I can't thank you.\nenough for the opportunity", speaker: "Rachel", left: "Interest", right: "Smiling"),
-                    .init(text: "And if it wasn't for you, I wouldn't have\nKnown Chloe is getting Married", speaker: "Rachel", left: "Cringe", right: "Neutral"),
-                    .init(text: "What?! You invited Rachel?", speaker: "Chloe", left: "Cringe", right: "Scared"),
-                    .init(text: "Yes, I did", speaker: "Bobby", left: "Flustered", right: "Nervous"),
-                    .init(text: "But-when?", speaker: "Chloe", left: "Glaring", right: "Anxious"),
-                    .init(text: "Back when you got suspended", speaker: "Bobby", left: "Suprised", right: "Nervous"),
-                    .init(text: "", speaker: "No one", left: "Frown", right: "Scared"),
-                    .init(text: "For giving a new born a horse\ntranqulizer. After it felt 'phantom' pain", speaker: "Bobby", left: "Interest", right: "Shocked"),
-                    .init(text: "At least I didn't prescribe opioids!", speaker: "Chloe", left: "Cringe", right: "Startled"),
-                    .init(text: "Only a suspension? Hmmmm...", speaker: "Rachel", left: "Bored", right: "Nervous"),
-                    .init(text: "I remeber how you mentioned Rachel\nAnd how others spoke of you two", speaker: "Bobby", left: "Glaring", right: "Nervous"),
-                    .init(text: "Did they say\nwe loved each other?", speaker: "Chloe", left: "Ashamed", right: "Arguing"),
-                    .init(text: "Why...would they?", speaker: "Bobby", left: "Suprised", right: "Shocked"),
-                    .init(text: "Just a funny prank, they did", speaker: "Chloe", left: "Smirk", right: "Anxious"),
-                    .init(text: "", speaker: "No one", left: "Cringe", right: "Anxious"),
-                    .init(text: "...And I thought it would be\nA suprise", speaker: "Bobby", left: "Cringe", right: "Nervous"),
-                    .init(text: "I hope I didn't revive any...\nPast fueds during a wedding", speaker: "Rachel", left: "Frown", right: "Shocked"),
-                    .init(text: "Fueds with...me?\nI wouldn't hurt a fly", speaker: "Rachel", left: "Suprised", right: "Nervous"),
-                    .init(text: "Do you...want me to leave?", speaker: "Rachel", left: "Frown", right: "Shocked"),
-                    .init(text: "...", speaker: "No one", left: "Frown", right: "Drained"),
-                    .init(text: "I can't kick out that...face", speaker: "Chloe", left: "Frown", right: "Startled"),
-                    .init(text: "You did nothing wrong\nhoney. Thank you.", speaker: "Chloe", left: "Flustered", right: "Relieved"),
-                    .init(text: "Its nice to see you again, Rachel", speaker: "Chloe", left: "Smirk", right: "Relieved"),
-                    .init(text: "Now excuse me, I-I must\nbeat...meet other guests", speaker: "Chloe", left: "Ashamed", right: "Focused"),
+                        .init(format: DialogueStyle.dialogue, text: "You are Rachel, right?", speaker: "Bobby", left: "Frown", right: "Dicussing"),
+                    .init(format: DialogueStyle.dialogue, text: "Congratulations, you two", speaker: "Rachel", left: "Smirk", right: "Neutral"),
+                    .init(format: DialogueStyle.dialogue, text: "And Bobby, again, I can't thank you.\nenough for the opportunity", speaker: "Rachel", left: "Interest", right: "Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "And if it wasn't for you, I wouldn't have\nKnown Chloe is getting Married", speaker: "Rachel", left: "Cringe", right: "Neutral"),
+                    .init(format: DialogueStyle.dialogue, text: "What?! You invited Rachel?", speaker: "Chloe", left: "Cringe", right: "Scared"),
+                    .init(format: DialogueStyle.dialogue, text: "Yes, I did", speaker: "Bobby", left: "Flustered", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "But-when?", speaker: "Chloe", left: "Glaring", right: "Anxious"),
+                    .init(format: DialogueStyle.dialogue, text: "Back when you got suspended", speaker: "Bobby", left: "Suprised", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "", speaker: "No one", left: "Frown", right: "Scared"),
+                    .init(format: DialogueStyle.dialogue, text: "For giving a new born a horse\ntranqulizer. After it felt 'phantom' pain", speaker: "Bobby", left: "Interest", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "At least I didn't prescribe opioids!", speaker: "Chloe", left: "Cringe", right: "Startled"),
+                    .init(format: DialogueStyle.dialogue, text: "Only a suspension? Hmmmm...", speaker: "Rachel", left: "Bored", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "I remeber how you mentioned Rachel\nAnd how others spoke of you two", speaker: "Bobby", left: "Glaring", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "Did they say\nwe loved each other?", speaker: "Chloe", left: "Ashamed", right: "Arguing"),
+                    .init(format: DialogueStyle.dialogue, text: "Why...would they?", speaker: "Bobby", left: "Suprised", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "Just a funny prank, they did", speaker: "Chloe", left: "Smirk", right: "Anxious"),
+                    .init(format: DialogueStyle.dialogue, text: "", speaker: "No one", left: "Cringe", right: "Anxious"),
+                    .init(format: DialogueStyle.dialogue, text: "...And I thought it would be\nA suprise", speaker: "Bobby", left: "Cringe", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "I hope I didn't revive any...\nPast fueds during a wedding", speaker: "Rachel", left: "Frown", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "Fueds with...me?\nI wouldn't hurt a fly", speaker: "Rachel", left: "Suprised", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "Do you...want me to leave?", speaker: "Rachel", left: "Frown", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "...", speaker: "No one", left: "Frown", right: "Drained"),
+                    .init(format: DialogueStyle.dialogue, text: "I can't kick out that...face", speaker: "Chloe", left: "Frown", right: "Startled"),
+                    .init(format: DialogueStyle.dialogue, text: "You did nothing wrong\nhoney. Thank you.", speaker: "Chloe", left: "Flustered", right: "Relieved"),
+                    .init(format: DialogueStyle.dialogue, text: "Its nice to see you again, Rachel", speaker: "Chloe", left: "Smirk", right: "Relieved"),
+                    .init(format: DialogueStyle.dialogue, text: "Now excuse me, I-I must\nbeat...meet other guests", speaker: "Chloe", left: "Ashamed", right: "Focused"),
 //                    Dark screen + internal dialogue
 //                    Chloe diappears
-                    .init(text: "I do sincerly apologize...", speaker: "Bobby", left: "Frown", right: "Nervous"),
-                    .init(text: "We appreciate that you came", speaker: "Bobby", left: "Frown", right: "Nervous"),
-                    .init(text: "Please, do still make youself\ncomforable", speaker: "Bobby", left: "Frown", right: "Nervous")
+                        .init(format: DialogueStyle.dialogue, text: "I do sincerly apologize...", speaker: "Bobby", left: "Frown", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "We appreciate that you came", speaker: "Bobby", left: "Frown", right: "Nervous"),
+                    .init(format: DialogueStyle.dialogue, text: "Please, do still make youself\ncomforable", speaker: "Bobby", left: "Frown", right: "Nervous")
                 ]
                                 
                 DialogueManager.shared.start(lines)
@@ -782,11 +782,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
                 let lines: [DialogueManager.Line] = [
-                    .init(text: "Rachel. How's the party?", speaker: "Bobby", left: "Smirk", right: "Neutral"),
-                    .init(text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling"),
-                    .init(text: "She's a great woman", speaker: "Bobby", left: "Interest", right: "Smiling"),
-                    .init(text: "I heard she wanted to\nkick out, Cecilia", speaker: "Rachel", left: "Cringe", right: "Shocked"),
-                    .init(text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous")
+                    .init(format: DialogueStyle.dialogue, text: "Rachel. How's the party?", speaker: "Bobby", left: "Smirk", right: "Neutral"),
+                    .init(format: DialogueStyle.dialogue, text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "She's a great woman", speaker: "Bobby", left: "Interest", right: "Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "I heard she wanted to\nkick out, Cecilia", speaker: "Rachel", left: "Cringe", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous")
                 ]
                                 
                 DialogueManager.shared.start(lines)
@@ -1061,6 +1061,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
         }
         // Slower rest so it doesn’t flash
         DialogueManager.shared.setupUI(
+            format: DialogueStyle.dialogue,
             text: "",
             speakerName: "",
             Left: "Smirk",
