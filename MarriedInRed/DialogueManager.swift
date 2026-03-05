@@ -207,8 +207,6 @@ var slow = SKAction.wait(forDuration: 0.18)
             leftImage.zPosition = 900
             leftImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
             
-//            leftImage.setScale(1.25)
-            
             leftImage.setScale(portraitScale(for: Left))
             
             leftImage.position = CGPoint(
@@ -227,8 +225,6 @@ var slow = SKAction.wait(forDuration: 0.18)
             let rightImage = SKSpriteNode(imageNamed: Right)
             rightImage.zPosition = 900
             rightImage.anchorPoint = CGPoint(x: 0.5, y: -0.12)
-            
-//            rightImage.setScale(1.25)
             
             rightImage.setScale(portraitScale(for: Right))
 

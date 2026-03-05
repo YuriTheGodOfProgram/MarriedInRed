@@ -482,7 +482,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             pause(name: UI_TO_DO_1)
 //            Make it more interactive
             
-        case 25:
+        case 50:
             
             if browser.isOpen{
                 browser.close()
@@ -491,136 +491,9 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 print("Browser Closed")
             } else {
                 if let gameView = self.view {
+                    print("Case pressed: ' ")
                     self.isPaused = true
-                    browser.open(url: "https://shop.app/m/darktiger?dynamicFilterVAvailability=%7B%22available%22%3Atrue%7D&sortBy=MOST_SALES", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 28:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://music.apple.com/us/playlist/stan-assassination-classroom/pl.u-vxy697juWKepqGx", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 26:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://nick088official.github.io/Married-in-Red-Web-Port/www/", in: gameView)
-                    print("Case 26 tapped")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 22:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://youtu.be/rvskMHn0sqQ?si=44kpe7S9NgwD7UNh", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 23:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://soundcloud.com/billieeilish", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 21:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://brilliant.org/courses/", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 29:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://residentevil.fandom.com/wiki/Resident_Evil_Village", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 20:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://www.cfr.org/report/conflicts-watch-2026", in: gameView)
-                    print("Browser Opened")
-                    AudioManager.shared.stopMusic()
-                }
-            }
-            
-        case 19:
-            
-            if browser.isOpen{
-                browser.close()
-                self.view?.window?.makeFirstResponder(self.view)
-                self.isPaused = false
-                print("Broswer Closed")
-            } else {
-                if let gameView = self.view {
-                    self.isPaused = true
-                    browser.open(url: "https://youtu.be/Ub-gsF1zFTE?si=BwSnrmoG4ZajHhuv", in: gameView)
+                    browser.open(url: "https://debatesim.us", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -636,7 +509,164 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
+                    print("Case pressed: 1")
                     browser.open(url: "https://quizrain.net/wpqpersonality/dexter-how-long-would-you-survive-as-dexters-target/?action=start_quize&qid=240580", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 19:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+               
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 2")
+                    browser.open(url: "https://youtu.be/Ub-gsF1zFTE?si=BwSnrmoG4ZajHhuv", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 20:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 3")
+                    browser.open(url: "https://www.cfr.org/report/conflicts-watch-2026", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 21:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 4")
+                    browser.open(url: "https://brilliant.org/courses/", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 23:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 5")
+                    browser.open(url: "https://soundcloud.com/billieeilish", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 22:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 6")
+                    browser.open(url: "https://youtu.be/rvskMHn0sqQ?si=44kpe7S9NgwD7UNh", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 26:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 7")
+//                    This should be a GoFundMe link
+                    browser.open(url: "", in: gameView)
+                    print("Case 26 tapped")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 28:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 8")
+                    browser.open(url: "https://music.apple.com/us/playlist/stan-assassination-classroom/pl.u-vxy697juWKepqGx", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+
+        case 25:
+            
+            if browser.isOpen{
+                browser.close()
+                print("Case pressed:  ")
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Browser Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 9")
+                    browser.open(url: "https://shop.app/m/darktiger?dynamicFilterVAvailability=%7B%22available%22%3Atrue%7D&sortBy=MOST_SALES", in: gameView)
+                    print("Browser Opened")
+                    AudioManager.shared.stopMusic()
+                }
+            }
+            
+        case 29:
+            
+            if browser.isOpen{
+                browser.close()
+                self.view?.window?.makeFirstResponder(self.view)
+                self.isPaused = false
+                print("Broswer Closed")
+            } else {
+                if let gameView = self.view {
+                    self.isPaused = true
+                    print("Case pressed: 0")
+                    browser.open(url: "https://residentevil.fandom.com/wiki/Resident_Evil_Village", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
                 }
@@ -652,6 +682,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
+                    print("Case pressed: -")
                     browser.open(url: "https://www.270towin.com", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
@@ -668,6 +699,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 if let gameView = self.view {
                     self.isPaused = true
+                    print("Case pressed: +")
                     browser.open(url: "https://21zerixpm.medium.com/building-a-modern-social-app-update-template-with-swiftui-ca7270b332e3", in: gameView)
                     print("Browser Opened")
                     AudioManager.shared.stopMusic()
@@ -683,6 +715,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 print("Broswer Closed")
             } else {
                 if let gameView = self.view {
+                    print("Case pressed: delete")
                     self.isPaused = true
                     browser.open(url: "https://www.khanacademy.org", in: gameView)
                     print("Browser Opened")
@@ -786,6 +819,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "Great, I really liked meeting.\n your mom", speaker: "Rachel", left: "Cringe", right: "Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "She's a great woman", speaker: "Bobby", left: "Interest", right: "Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "I heard she wanted to\nkick out, Cecilia", speaker: "Rachel", left: "Cringe", right: "Shocked"),
+                    .init(format: DialogueStyle.dialogue, text: "Cecilia?!", speaker: "Bobby", left: "Cringe", right: "Shocked"), 
                     .init(format: DialogueStyle.dialogue, text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous")
                 ]
                                 
