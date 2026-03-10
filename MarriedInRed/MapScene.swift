@@ -787,12 +787,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "Fueds with...me?\nI wouldn't hurt a fly", speaker: "Rachel", left: "Suprised", right: "Nervous"),
                     .init(format: DialogueStyle.dialogue, text: "Do you...want me to leave?", speaker: "Rachel", left: "Frown", right: "Shocked"),
                     .init(format: DialogueStyle.dialogue, text: "...", speaker: "No one", left: "Frown", right: "Drained"),
-                    .init(format: DialogueStyle.dialogue, text: "I can't kick out that...face", speaker: "Chloe", left: "Frown", right: "Startled"),
                     .init(format: DialogueStyle.dialogue, text: "You did nothing wrong\nhoney. Thank you.", speaker: "Chloe", left: "Flustered", right: "Relieved"),
                     .init(format: DialogueStyle.dialogue, text: "Its nice to see you again, Rachel", speaker: "Chloe", left: "Smirk", right: "Relieved"),
                     .init(format: DialogueStyle.dialogue, text: "Now excuse me, I-I must\nbeat...meet other guests", speaker: "Chloe", left: "Ashamed", right: "Focused"),
 //                    Dark screen + internal dialogue
-//                    Chloe diappears
+//                    Chloe diappears 
                         .init(format: DialogueStyle.dialogue, text: "I do sincerly apologize...", speaker: "Bobby", left: "Frown", right: "Nervous"),
                     .init(format: DialogueStyle.dialogue, text: "We appreciate that you came", speaker: "Bobby", left: "Frown", right: "Nervous"),
                     .init(format: DialogueStyle.dialogue, text: "Please, do still make youself\ncomforable", speaker: "Bobby", left: "Frown", right: "Nervous")
@@ -820,7 +819,12 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "She's a great woman", speaker: "Bobby", left: "Interest", right: "Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "I heard she wanted to\nkick out, Cecilia", speaker: "Rachel", left: "Cringe", right: "Shocked"),
                     .init(format: DialogueStyle.dialogue, text: "Cecilia?!", speaker: "Bobby", left: "Cringe", right: "Shocked"), 
-                    .init(format: DialogueStyle.dialogue, text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous")
+                    .init(format: DialogueStyle.dialogue, text: "I'm going to have to...excuse myself", speaker: "Bobby", left: "Cringe", right: "Nervous"),
+//                    Dark screen + internal dialogue
+//                    Bobby disappears + Cecilia appears
+                    .init(format: DialogueStyle.dialogue, text: "You must be Rachel", speaker: "Someone", left: "Suprised", right: ""),
+                    .init(format: DialogueStyle.dialogue, text: "...", speaker: "No one", left: "Suprised", right: "Cecilia-Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "Indeed", speaker: "Rachel", left: "Interest", right: "Cecilia-Smiling")
                 ]
                                 
                 DialogueManager.shared.start(lines)

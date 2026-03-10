@@ -196,7 +196,6 @@ var slow = SKAction.wait(forDuration: 0.18)
         return defaultPortraitScale
     }
 
-        
         let marginX: CGFloat = 180
         let overlapIntoBox: CGFloat = 20
         let portaitsBaseY = -dialogueBox.size.height / 2 + overlapIntoBox
