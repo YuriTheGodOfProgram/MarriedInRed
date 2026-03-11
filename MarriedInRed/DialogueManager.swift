@@ -27,7 +27,7 @@ struct DialogueFrame {
 private let defaultPortraitScale: CGFloat = 1.25
 
 private let AltereredState: [(key: String, scale: CGFloat)] = [
-    ("Cecilia", 1.02),
+    ("Cecilia", 1.01),
     ("Bobby", 1.03)
 ]
 
