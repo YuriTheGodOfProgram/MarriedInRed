@@ -38,6 +38,12 @@ Run settings:
       
       ->XCode 16.0
 
+Download as ZIP: 
+- https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+
+Add as a package: 
+- https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
+
 - Pull Requests:
       ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
 
@@ -51,10 +57,6 @@ You could also contribute in the [dicussions](https://github.com/YuriTheGodOfPro
 <img width="1031" height="784" alt="Screenshot 2026-01-13 at 1 53 51 PM" src="https://github.com/user-attachments/assets/b655594b-d259-48e9-8251-b4732739ba7a" />
 <img width="1031" height="787" alt="Screenshot 2026-01-21 at 9 41 00 AM" src="https://github.com/user-attachments/assets/f6367adc-b630-4449-8bbd-faaeb922ca31" />
 
-Download as ZIP: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
-Add as a package: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 Inspired by a Korean Game Jam
