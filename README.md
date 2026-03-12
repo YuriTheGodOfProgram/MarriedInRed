@@ -28,8 +28,6 @@ Run settings:
 
 You could also contribute in the [dicussions](https://github.com/YuriTheGodOfProgram/MarriedInRed/discussions/categories/ideas) 
 
-Some screenshots: 
-
 <img width="816" height="624" alt="CG-MURDER-7" src="https://github.com/user-attachments/assets/15365f3c-e08a-42f3-9a22-4adcbf1942d9" />
 <img width="816" height="624" alt="CG-REVEAL-6" src="https://github.com/user-attachments/assets/18cb7f88-1b12-427a-8d5f-d4f901b23145" />
 <img width="816" height="624" alt="CG-MURDER-4" src="https://github.com/user-attachments/assets/13eb7f96-93b6-4984-a65d-63b70d8c7734" />
