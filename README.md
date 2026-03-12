@@ -2,6 +2,10 @@
 
 Married in Red is a short 2D RPG thriller-story game with visual novel and point-and-click elements set in the United States that follows the story of Rachel visiting her old friend from University, Chloe, on her wedding day.
 
+ 
+🎁Help Wanted🎁: 
+- Check out the GamePlan, for the current tasks. Post suggestions in dicussions, or 🍴fork the repository. 
+
 🕊️Features🕊️: 
 - Classic RPG horror type gameplay with to-do list style gameplay. 
 - Character driven story, with humor mixed in.
