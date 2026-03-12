@@ -18,15 +18,17 @@ Married in Red is a short 2D RPG thriller-story game with visual novel and point
 📆Completion date📆: 
 - July 4, 2026
 
-Download as ZIP: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+✅Progress tracker✅: 
+- 48% 
 
-Add as a package: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
-
-Progress tracker: 48% 
-
-Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
+Languages: 
+- SpriteKit, 
+- Foundation, 
+- GameplayKit, 
+- Cocoa, 
+- Webkit, 
+- MediaPlayer, 
+- AVFoundation 
 
 Run settings: 
 
@@ -47,7 +49,12 @@ You could also contribute in the [dicussions](https://github.com/YuriTheGodOfPro
 <img width="816" height="624" alt="CG-MURDER-11" src="https://github.com/user-attachments/assets/b67f5117-f68f-46de-94b2-09d67b416361" />
 <img width="816" height="624" alt="CG-MURDER-13" src="https://github.com/user-attachments/assets/98825ad9-e8cc-4c62-91fc-ef9ca929a2c3" />
 <img width="1031" height="784" alt="Screenshot 2026-01-13 at 1 53 51 PM" src="https://github.com/user-attachments/assets/b655594b-d259-48e9-8251-b4732739ba7a" />
-
 <img width="1031" height="787" alt="Screenshot 2026-01-21 at 9 41 00 AM" src="https://github.com/user-attachments/assets/f6367adc-b630-4449-8bbd-faaeb922ca31" />
+
+Download as ZIP: 
+- https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+
+Add as a package: 
+- https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 Inspired by a Korean Game Jam
