@@ -41,7 +41,7 @@ Run settings:
 - Download as ZIP: 
       -> https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
--Add as a package: 
+- Add as a package: 
       -> https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 - Pull Requests:
