@@ -1,17 +1,27 @@
 ![Married_in_red_title_screen](https://github.com/user-attachments/assets/f3771c7b-7d72-4144-bf63-f73ea037cb7e)
 
-Story: Married in Red  is a short 2D RPG thriller-story game with visual novel and point-and-click elements set in the United States that follows the story of Rachel visiting her old friend from University, Chloe, on her wedding day.
+Married in Red is a short 2D RPG thriller-story game with visual novel and point-and-click elements set in the United States that follows the story of Rachel visiting her old friend from University, Chloe, on her wedding day.
 
+🕊️Features🕊️: 
+- Classic RPG horror type gameplay with to-do list style gameplay. 
+- Character driven story.
+ 
+🍰Estimated gameplay🍰: 
+- Not complete  
 
-Features: Multiple-choice, soundtrack
+🥀Endings🥀: 
+-  Not complete 
+
+🚑Warnings🚑:  
+A few deaths, graphic blood, violence, disturbing imagery and audio.
+
+📆Completion date📆: July 4, 2026
 
 Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
 Add as a package: https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
-Estimated completion date: July 4, 2026
-
-Progress tracker: 46% 
+Progress tracker: 46%
 
 Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
 
@@ -37,6 +47,5 @@ You could also contribute in the [dicussions](https://github.com/YuriTheGodOfPro
 
 <img width="1031" height="787" alt="Screenshot 2026-01-21 at 9 41 00 AM" src="https://github.com/user-attachments/assets/f6367adc-b630-4449-8bbd-faaeb922ca31" />
 
-
-
+This game is inspired on a Korean Game Jam   
 
