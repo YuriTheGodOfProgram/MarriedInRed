@@ -38,11 +38,11 @@ Run settings:
       
       ->XCode 16.0
 
-Download as ZIP: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+- Download as ZIP: 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
 
-Add as a package: 
-- https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
+-Add as a package: 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 - Pull Requests:
       ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
