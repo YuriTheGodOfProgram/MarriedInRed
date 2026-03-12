@@ -4,7 +4,7 @@ Married in Red is a short 2D RPG thriller-story game with visual novel and point
 
 🕊️Features🕊️: 
 - Classic RPG horror type gameplay with to-do list style gameplay. 
-- Character driven story.
+- Character driven story, with humor mixed in.
  
 🍰Estimated gameplay🍰: 
 - Not complete  
