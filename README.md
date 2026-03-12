@@ -9,8 +9,6 @@ Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/ref
 
 Add as a package: https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
-MarriedInRed is a thiller visual novel game made with SpriteKit 
-
 Estimated completion date: July 4, 2026
 
 Progress tracker: 46% 
