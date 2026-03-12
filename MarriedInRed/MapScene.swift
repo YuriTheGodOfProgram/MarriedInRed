@@ -829,7 +829,8 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "Indeed", speaker: "Rachel", left: "Interest", right: "Cecilia-Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "But, you haven't introduced yourself", speaker: "Rachel", left: "Bored", right: "Cecilia-Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "I'm Cecilia, and despite my name\n...I'm not actually French", speaker: "Cecilia", left: "Glaring", right: "Cecilia-Expressive"),
-                    .init(format: DialogueStyle.dialogue, text: "", speaker: "", left: "", right: "")
+                    .init(format: DialogueStyle.dialogue, text: "Why does Bobby's mom\n dislike your presence?", speaker: "Rachel", left: "Interest", right: "Cecilia-Expressive"),
+                    .init(format: DialogueStyle.dialogue, text: "Well...", speaker: "Cecilia", left: "Interest", right: "Cecilia-Talking")
                 ]
                                 
                 DialogueManager.shared.start(lines)
