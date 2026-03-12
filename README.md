@@ -39,6 +39,8 @@ Run settings:
       ->Download the package depedencies
       
       ->XCode 16.0
+-Updated version(demo): 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/releases/tag/Demo2 
 
 - Download as ZIP: 
       -> https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
