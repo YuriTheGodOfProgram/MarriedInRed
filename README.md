@@ -21,7 +21,7 @@ Married in Red is a short 2D RPG thriller-story game with visual novel and point
 ✅Progress tracker✅: 
 - 48% 
 
-Languages: 
+📝Languages📝: 
 - SpriteKit, 
 - Foundation, 
 - GameplayKit, 
