@@ -45,7 +45,7 @@ Run settings:
       -> https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 - Pull Requests:
-      ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
 
 You could also contribute in the [dicussions](https://github.com/YuriTheGodOfProgram/MarriedInRed/discussions/categories/ideas) 
 
