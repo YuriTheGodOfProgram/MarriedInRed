@@ -1,20 +1,40 @@
 ![Married_in_red_title_screen](https://github.com/user-attachments/assets/f3771c7b-7d72-4144-bf63-f73ea037cb7e)
 
-Story: MarriedInRed is a 2D RPG thiller game with visual novel and point-and-click elements and follows Rachel visiing her old 'friend' Chloe on her wedding day
+Married in Red is a short 2D RPG thriller-story game with visual novel and point-and-click elements set in the United States that follows the story of Rachel visiting her old friend from University, Chloe, on her wedding day.
 
-Features: Multiple-choice, soundtrack
+ 
+🎁Help Wanted🎁: 
+- Check out the GamePlan, for the current tasks. Post suggestions in dicussions, or 🍴fork the repository. 
 
-Download as ZIP: https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+🕊️Features🕊️: 
+- Classic RPG horror type gameplay with to-do list style gameplay. 
+- Character driven story, with humor mixed in.
+- Multiple dialogue choices. 
+- Soundtrack
+ 
+🍰Estimated gameplay🍰: 
+- Not complete  
 
-Add as a package: https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
+🥀Endings🥀: 
+-  Not complete 
 
-MarriedInRed is a thiller visual novel game made with SpriteKit 
+🚑Warnings🚑:  
+- A few deaths, graphic blood, violence, disturbing imagery and audio.
 
-Estimated completion date: July 4, 2026
+📆Completion date📆: 
+- July 4, 2026
 
-Progress tracker: 46% 
+✅Progress tracker✅: 
+- 48% 
 
-Languages: SpriteKit, Foundation, GameplayKit, Cocoa, Webkit, MediaPlayer, AVFoundation 
+📝Languages📝: 
+- SpriteKit, 
+- Foundation, 
+- GameplayKit, 
+- Cocoa, 
+- Webkit, 
+- MediaPlayer, 
+- AVFoundation 
 
 Run settings: 
 
@@ -23,13 +43,19 @@ Run settings:
       ->Download the package depedencies
       
       ->XCode 16.0
+- Updated version(demo): 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/releases/tag/Demo2 
+
+- Download as ZIP: 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/archive/refs/heads/main.zip
+
+- Add as a package: 
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed.git 
 
 - Pull Requests:
-      ->https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
+      -> https://github.com/YuriTheGodOfProgram/MarriedInRed/pulls
 
 You could also contribute in the [dicussions](https://github.com/YuriTheGodOfProgram/MarriedInRed/discussions/categories/ideas) 
-
-Some screenshots: 
 
 <img width="816" height="624" alt="CG-MURDER-7" src="https://github.com/user-attachments/assets/15365f3c-e08a-42f3-9a22-4adcbf1942d9" />
 <img width="816" height="624" alt="CG-REVEAL-6" src="https://github.com/user-attachments/assets/18cb7f88-1b12-427a-8d5f-d4f901b23145" />
@@ -37,9 +63,8 @@ Some screenshots:
 <img width="816" height="624" alt="CG-MURDER-11" src="https://github.com/user-attachments/assets/b67f5117-f68f-46de-94b2-09d67b416361" />
 <img width="816" height="624" alt="CG-MURDER-13" src="https://github.com/user-attachments/assets/98825ad9-e8cc-4c62-91fc-ef9ca929a2c3" />
 <img width="1031" height="784" alt="Screenshot 2026-01-13 at 1 53 51 PM" src="https://github.com/user-attachments/assets/b655594b-d259-48e9-8251-b4732739ba7a" />
-
 <img width="1031" height="787" alt="Screenshot 2026-01-21 at 9 41 00 AM" src="https://github.com/user-attachments/assets/f6367adc-b630-4449-8bbd-faaeb922ca31" />
 
 
 
-
+Inspired by a Korean Game Jam
