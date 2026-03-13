@@ -830,7 +830,12 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "But, you haven't introduced yourself", speaker: "Rachel", left: "Bored", right: "Cecilia-Smiling"),
                     .init(format: DialogueStyle.dialogue, text: "I'm Cecilia, and despite my name\n...I'm not actually French", speaker: "Cecilia", left: "Glaring", right: "Cecilia-Expressive"),
                     .init(format: DialogueStyle.dialogue, text: "Why does Bobby's mom\n dislike your presence?", speaker: "Rachel", left: "Interest", right: "Cecilia-Expressive"),
-                    .init(format: DialogueStyle.dialogue, text: "Well...", speaker: "Cecilia", left: "Interest", right: "Cecilia-Talking")
+                    .init(format: DialogueStyle.dialogue, text: "Well...", speaker: "Cecilia", left: "Interest", right: "Cecilia-Talking"),
+                    .init(format: DialogueStyle.dialogue, text: "You don't have enough EXP...\nfor me to tell you", speaker: "Cecilia", left: "Suprised", right: "Cecilia-Exausted"),
+                    .init(format: DialogueStyle.dialogue, text: "There's no way to get EXP...", speaker: "Rachel", left: "Frown", right: "Cecilia-Exausted"),
+                    .init(format: DialogueStyle.dialogue, text: "Well...actually you get EXP\nby...profiting in conversations", speaker: "Cecilia", left: "Frown", right: "Cecilia-Talking"),
+                    .init(format: DialogueStyle.dialogue, text: "How could a conversation...\nmake me money?", speaker: "Rachel", left: "Cringe", right: "Cecilia-Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "Well you could challenge people to bets\nhug Nagisa, answer questions,\nor spread rumors about Chloe and Bobby", speaker: "Cecilia", left: "Cringe", right: "Cecilia")
                 ]
                                 
                 DialogueManager.shared.start(lines)
