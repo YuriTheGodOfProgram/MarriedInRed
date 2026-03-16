@@ -832,10 +832,14 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                     .init(format: DialogueStyle.dialogue, text: "Why does Bobby's mom\n dislike your presence?", speaker: "Rachel", left: "Interest", right: "Cecilia-Expressive"),
                     .init(format: DialogueStyle.dialogue, text: "Well...", speaker: "Cecilia", left: "Interest", right: "Cecilia-Talking"),
                     .init(format: DialogueStyle.dialogue, text: "You don't have enough EXP...\nfor me to tell you", speaker: "Cecilia", left: "Suprised", right: "Cecilia-Exausted"),
-                    .init(format: DialogueStyle.dialogue, text: "There's no way to get EXP...", speaker: "Rachel", left: "Frown", right: "Cecilia-Exausted"),
+                    .init(format: DialogueStyle.dialogue, text: "I'm devastated", speaker: "Rachel", left: "Glaring", right: "Cecilia-Exausted"),
+                    .init(format: DialogueStyle.dialogue, text: "There's no way to get EXP...", speaker: "Rachel", left: "Suprised", right: "Cecilia-Exausted"),
                     .init(format: DialogueStyle.dialogue, text: "Well...actually you get EXP\nby...profiting in conversations", speaker: "Cecilia", left: "Frown", right: "Cecilia-Talking"),
                     .init(format: DialogueStyle.dialogue, text: "How could a conversation...\nmake me money?", speaker: "Rachel", left: "Cringe", right: "Cecilia-Smiling"),
-                    .init(format: DialogueStyle.dialogue, text: "Well you could challenge people to bets\nhug Nagisa, answer questions,\nor spread rumors about Chloe and Bobby", speaker: "Cecilia", left: "Cringe", right: "Cecilia")
+                    .init(format: DialogueStyle.dialogue, text: "Well you could challenge people to bets\n, answer questions,\nor spread rumors about Chloe and Bobby", speaker: "Cecilia", left: "Cringe", right: "Cecilia"),
+                    .init(format: DialogueStyle.dialogue, text: "OK...I'll try to profit", speaker: "Rachel", left: "Cringe", right: "Cecilia-Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "Ok. I'm going to leave now.", speaker: "Rachel", left: "Glaring", right: "Cecilia-Smiling"),
+                    .init(format: DialogueStyle.dialogue, text: "Come again!", speaker: "Cecilia", left: "Glaring", right: "Cecilia-Expressive")
                 ]
                                 
                 DialogueManager.shared.start(lines)
