@@ -43,7 +43,7 @@ class GameScene: SKScene{
         
 //        Incorporate a system for a UI scene in GameScene, and for a textbox with instructions to display
 //        Things should pop up, textboxes. Likely utilizing thought dialogue.
-        
+                
         MainMenu.position = CGPoint(x: size.width/2, y: size.height/2)
         MainMenu.zPosition = 100
         addChild(MainMenu)
@@ -167,6 +167,7 @@ class GameScene: SKScene{
                 RunningMan = true
                 _1984(node: MainMenu)
             }
+            AudioManager.shared.playMenuMusic(named: "Guest Chatter")
         case .Continue:
             goToMapScene(after: 0)
         case .Quit:

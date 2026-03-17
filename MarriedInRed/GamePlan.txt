@@ -5,9 +5,9 @@ Note:
 *Implement accurate dialogue and scenes
 
 Things to complete(in order):
-1. Incorporate UIs for GameScene that pop up, and you need to do a specific action to eliminate it
-2. Eliminate the system of automatatically proceeding after a set time
-3. Add audio of the Guest Chatter for the GameScene
+1. When Rachel stops walking in a specific direction. Then stop in a default position.
+2. Incorporate UIs for GameScene that pop up, and you need to do a specific action to eliminate it
+3. Eliminate the system of automatatically proceeding after a set time
 4. Improve dialogue transition.
 5. Implement thought UIs with options for dimming the background or not likely a bool.
 6. Move through rooms by tapping 'Z'
@@ -21,7 +21,7 @@ Things to complete(in order):
 14. Implement dialogue for specific player actions, like walking into someone, or staring too long.
 15. Add SFX sounds, for gameplay.
 16. Add a 'save' file system, with story progress implemented within.
-17. Tap 'x' to open a UI page with inventory(as a list same size page), Audio(to interact with volume, SFX), Save, and Title. Then have to tap X again to exit.
+17. Tap 'x' to open a UI page with inventory(as a list same size page), Audio(to interact with volume, SFX), Save, andTitle. Then have to tap X again to exit.
 18. Dark/Light changes.
 19. Improve graphics, likely with a package.
 20. Add apple game aspects, such as leaderboard, achivements, and perhaps...co-play mode? (GKGameCenterViewController).
