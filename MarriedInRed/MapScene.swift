@@ -64,6 +64,7 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
     var animateAction: SKAction?
     var slow = SKAction.wait(forDuration: 0.19)
     var sprint = false
+    var stop = false
         
     var rooms: [Room] = []
     var currentRoom: Room?
@@ -381,6 +382,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             Movement = SKAction.move(by: CGVector(dx: 30, dy: 0), duration: 0.1)
             player.run(Constant)
         }
+//        Find a way to make Rachel stop, at this pose
+//        if stop == true{
+//            let images = ["Innocent Right Walk 2"]
+//            stop = false
+//        }
     }
     func moveLeft(){
         
@@ -396,6 +402,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             Movement = SKAction.move(by: CGVector(dx: -30, dy: 0), duration: 0.1)
             player.run(Constant)
         }
+//        Find a way to make Rachel stop, at this pose
+//        if stop == true{
+//            let images = ["Innocent Left Walk 2"]
+//            stop = false
+//        }
     }
     func moveFoward(){
         let images = ["Innocent Back Walk 1", "Innocent Back Walk 2", "Innocent Back Walk 3", "Innocent Back Walk 4", "Innocent Back Walk 5"]
@@ -410,6 +421,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             Movement = SKAction.move(by: CGVector(dx: 0, dy: 30), duration: 0.1)
             player.run(Constant)
         }
+//        Find a way to make Rachel stop, at this pose
+//        if stop == true{
+//            let images = ["Innocent Back Walk 2"]
+//            stop = false 
+//        }
     }
     func moveBackward(){
         let images = ["Innocent Front Walk 1", "Innocent Front Walk 2", "Innocent Front Walk 3", "Innocent Front Walk 4", "Innocent Front Walk 5"]
@@ -424,6 +440,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
             Movement = SKAction.move(by: CGVector(dx: 0, dy: -30), duration: 0.1)
             player.run(Constant)
         }
+//        Find a way to make Rachel stop, at this pose
+//        if stop == true{
+//            let images = ["Innocent Front Walk 3"]
+//            stop = false
+//        }
     }
     
     
@@ -471,11 +492,11 @@ class MapScene: SKScene, SKPhysicsContactDelegate {
                 sprint = true
             }
             
-//        case 48:
-//            
-//            pause(name: Paused)
+        case 48:
+            pause(name: Paused)
             
 //            Make it more interactive
+//            Technically it switches pages...and has an entire UI menu
             
         case 17:
             
